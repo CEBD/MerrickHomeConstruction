@@ -1,0 +1,20 @@
+﻿input[type='text'].part-search-searchbox {
+    
+    
+    -webkit-transition: all 1200ms ease-in-out;
+    -moz-transition: all 1200ms ease-in-out;
+    -ms-transition: all 1200ms ease-in-out;
+    -o-transition: all 1200ms ease-in-out;
+    transition: all 1200ms ease-in-out;
+    width: 50%;
+    float: right;
+}
+
+
+input[type='text'].part-search-searchbox:focus {
+    
+    background-color: rgba(91,155,255,0.3);
+    width: 95%;
+    background-color: rgba(91,155,255,0.3);
+    
+}

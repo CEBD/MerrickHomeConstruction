@@ -1,0 +1,6 @@
+﻿@model Contrib.DeleteContentTypes.Settings.ContentTypeSettings
+
+<fieldset>
+    @Html.ActionLink(T("Remove Content Type").Text, "DeleteContentType", "Admin", new { area = "Contrib.DeleteContentTypes", contenttype = Model.ContentType }, new { itemprop = "RemoveUrl UnsafeUrl", @class = "button" })
+    <span class="hint">@T("Removes this content type and all its content items")</span>
+</fieldset>

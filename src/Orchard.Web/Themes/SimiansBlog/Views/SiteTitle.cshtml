@@ -1,0 +1,15 @@
+﻿@{
+    var homeUrl = Href("~/");
+    Script.Include("~/Themes/SimiansBlog/Scripts/parts/sitetitle.js");
+    Style.Include("~/Themes/SimiansBlog/Styles/parts/sitetitle.css");
+}
+<div class="waffles">
+    <h1 id="site-title" class="w-12 w-alpha w-omega">
+        <div class="w-2 w-fix w-alpha">
+            <span class="ui-icon ui-icon-32 ui-icon-dashedcircle site-title-icon"></span>
+        </div>
+        <div class="w-auto">
+            <a href="@homeUrl" class="site-title-link">@WorkContext.CurrentSite.SiteName</a>
+        </div>
+    </h1>
+</div>

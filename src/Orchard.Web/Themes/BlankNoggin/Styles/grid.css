@@ -1,0 +1,254 @@
+/*==== Stew's Grid / simple responsive 12 col grid ====*/
+/*==== Probably not as good as waffles ====*/
+/*==== Copywright NineCollective 2013 =====*/
+/*==== Version 1.0.0 / April 1, 2013*/
+
+body {
+    background: #eeeef1;
+}
+
+
+.container {
+    /*1000px*/
+    max-width: 1024px;
+    width: 80.25%;
+    margin: 0 auto;
+    padding: 2.3%;
+    background: #ffffff;
+    border: 1px solid #c4c4c5;
+}
+
+section:before, section:after {
+    width: 100%;
+    display: table;
+    line-height: 0;
+    content: " ";
+}
+
+section:after {
+    clear: both;
+}
+
+/*==== Images & SVGs ====*/
+img, object {
+    width: 100%;
+}
+
+
+/*==== Grid Globals ====*/
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, #layout-thirds > div, #layout-article-first-container > article, #layout-article-first-container > aside {
+    float: left;
+    margin-bottom: 3.5%;
+    margin-left: 2.4%;
+}
+
+/*=== Orchard Specific Stuff that needs to be above all else. ===*/
+#layout-thirds > div {
+    width: 100%;
+}
+
+    section .grid-1:first-child, section .grid-2:first-child, section .grid-3:first-child, section .grid-4:first-child, section .grid-5:first-child, section .grid-6:first-child, section .grid-7:first-child, section .grid-8:first-child, section .grid-9:first-child, section .grid-10:first-child, section .grid-11:first-child, section .grid-12, #layout-thirds > div:first-child, #layout-article-first-container article {
+        margin-left: 0;
+    }
+
+/*==== Grid Widths - desktop ====*/
+
+
+@media (min-width: 960px) {
+
+    .grid-1 {
+        width: 6.13%;
+        /*background-color: cornsilk;*/
+    }
+
+    .grid-2 {
+        width: 14.66%;
+        /*background-color: azure;*/
+    }
+
+    .grid-3 {
+        width: 23.19%;
+        /*background-color: lime;*/
+    }
+
+    .grid-4, .thirds-123 #layout-thirds > div {
+        width: 31.72%;
+        /*background-color: red;*/
+    }
+
+    .grid-5 {
+        width: 40.25%;
+        /*background-color: cadetblue;*/
+    }
+
+    .grid-6, .thirds-12 #layout-thirds > div, .thirds-23 #layout-thirds > div, .thirds-13 #layout-thirds > div, article#article-first, aside#aside-first {
+        width: 48.79%;
+        /*background-color: crimson;*/
+    }
+
+    .grid-7 {
+        width: 57.23%;
+        /*background-color: darkgoldenrod;*/
+    }
+
+    .grid-8 {
+        width: 65.85%;
+        /*background-color: aquamarine;*/
+    }
+
+    .grid-9 {
+        width: 74.38%;
+        /*background-color: coral;*/
+    }
+
+    .grid-10 {
+        width: 82.91%;
+        /*background-color: deepskyblue;*/
+    }
+
+    .grid-11 {
+        width: 91.44%;
+        /*background-color: dodgerblue;*/
+    }
+
+    .grid-12 {
+        width: 100%;
+        /*background-color: darkorchid;*/
+    }
+
+
+    .grid-auto:first-child:nth-last-child(1) {
+        /*shamelessly ripping of jesse...*/
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+    .grid-auto {
+        width: auto;
+    }
+
+    .show-desktop, .show-desktop.show-tablet {
+        visibility: visible;
+    }
+
+    .show-tablet {
+        visibility: hidden;
+        display: none;
+    }
+
+    .show-phone {
+        visibility: visible;
+        display: none;
+    }
+
+
+    /*=== /desktop ===*/
+}
+
+/*=== Grid Widts - Tablet ====*/
+@media (min-width: 481px) and (max-width: 959px) {
+    
+    /*=== /tablet ===*/
+    .container {
+        background: #ffffff;
+    }
+
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+        width: 48.83%;
+        margin-left: 2%;
+    }
+
+        .grid-1:nth-child(odd), .grid-2:nth-child(odd), section .grid-3:nth-child(3), section .grid-4:last-child {
+            margin-left: 0;
+        }
+
+    .grid-1 {
+        background: #f83a22;
+    }
+
+    .grid-2 {
+        background: #7bd148;
+    }
+
+    .grid-3, .grid-4, .grid-6 {
+        background: #666666;
+        width: 48.79%;
+    }
+
+    .grid-3 {
+        background: #9fc6e7;
+    }
+
+    .grid-4 {
+        background: #ff7537;
+    }
+
+
+    .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .thirds-123 #layout-thirds > div, #layout-thirds > div, .thirds-23 #layout-thirds > div, .thirds-13 #layout-thirds > div, .thirds-23 #layout-thirds > div, .thirds-13 #layout-thirds > div {
+        width: 100%;
+        background: #ffad46;
+    }
+
+    .show-desktop {
+        visibility: hidden;
+        display: none;
+    }
+
+        .show-tablet, .show-desktop.show-tablet {
+            visibility: visible;
+        }
+
+    .show-phone {
+        visibility: hidden;
+        display: none;
+    }
+
+    /*=== /Tablet ===*/
+}
+
+/*=== Grid Widts - Phone ====*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+    body {
+    }
+
+
+    .container {
+        background: #ffffff;
+    }
+
+    .grid-1, .grid-2 {
+        width: 48.83%;
+        margin-left: 2%;
+    }
+
+        .grid-1:nth-child(odd), .grid-2:nth-child(odd) {
+            margin-left: 0;
+        }
+
+
+    .grid-3, .grid-4, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, #layout-thirds > div, .thirds-12 #layout-thirds > div, .thirds-23 #layout-thirds > div, .thirds-13 #layout-thirds > div, {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 4.1%;
+    }
+
+
+
+    .show-desktop {
+        visibility: hidden;
+        display: none;
+    }
+
+    .show-tablet {
+        visibility: hidden;
+        display: none;
+    }
+
+    .show-phone {
+        visibility: visible;
+    }
+    /*=== /Phone ===*/
+}

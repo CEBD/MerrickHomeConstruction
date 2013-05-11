@@ -1,0 +1,7 @@
+﻿Name: Simians Blog
+Author: Jesse
+Description: This theme is the core theme used for my personal website, Simian's Blog. It is also modular enough to service most other needs.
+Version: 1.6.0
+Tags: Jesse Harlin, Waffles
+Website: http://simiansblog.com
+Zones: PreBody, Header, Search, Navigation, Billboard,  SideAlpha, SideOmega, PreMain, PostMain, Messaging, PreContent, Content, PostContent, Footer, PostBody, ContentN_1,ContentN_2,ContentN_3,ContentN_4,ContentN_5,ContentN_6,ContentN_7,ContentN_8,ContentN_9,ContentN_10,ContentN_11,ContentN_12, N_1,N_2,N_3,N_4,N_5,N_6,N_7,N_8,N_9,N_10,N_11,N_12, FooterN_1,FooterN_2,FooterN_3,FooterN_4,FooterN_5,FooterN_6,FooterN_7,FooterN_8,FooterN_9,FooterN_10,FooterN_11,FooterN_12

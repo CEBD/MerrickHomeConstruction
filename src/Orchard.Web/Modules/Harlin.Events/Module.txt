@@ -1,0 +1,10 @@
+﻿Name: Harlin.Events
+AntiForgery: enabled
+Author: Jesse Harlin
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: This is a module that is designed to offer a lot of functionaly related to a particular date or event you have scheduled
+Features:
+    Harlin.Events:
+        Description: Description for feature Harlin.Events.

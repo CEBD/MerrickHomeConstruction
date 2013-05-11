@@ -1,0 +1,56 @@
+﻿@using Orchard.Utility.Extensions;
+@using Contrib.Taxonomies.Models;
+@using Contrib.Taxonomies.Helpers;
+
+@{
+    Style.Include("admin-taxonomy.css");
+    Style.Include("tax-menu-navigation");
+    Script.Include("tax-menu-navigation");
+    int level = 0;
+    int firstLevel = -1;
+}
+
+<div class="taxonomy-menu">
+    <header>
+        <h3>Jump To:</h3>
+    </header>
+
+    @*    <ul class="terms">
+	@foreach (TermPart term in Model.Terms) {
+     if(firstLevel == -1){
+         firstLevel = term.GetLevels();
+     }
+     var text = Model.ContentPart.DisplayContentCount ? (string)term.Name + T(" ({0})", term.Count).Text : (string)term.Name;
+		if(term.GetLevels() - firstLevel > level) {
+			level++;
+			@:<ul class="terms">
+		}
+		    @:</li>
+		
+		if(term.GetLevels() - firstLevel < level) {
+			level--;
+			@:</ul>
+		}
+
+		@:<li>
+			@Html.ItemDisplayLink(text, term.ContentItem)
+ }
+        
+		</li>
+	@for (int i = 0; i < level; i++) {
+	@:</ul>
+	}
+    </ul>*@
+
+    <section class="tax-menu-navigation">
+
+    </section>
+
+    <footer>
+        <button>Contact Us!</button>
+        <button>Schedule a Demo</button>
+    </footer>
+
+
+</div>
+

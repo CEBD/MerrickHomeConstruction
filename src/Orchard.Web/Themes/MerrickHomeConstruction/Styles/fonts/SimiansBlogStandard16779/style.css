@@ -1,0 +1,482 @@
+@font-face {
+	font-family: 'SimiansBlogStandard';
+	src:url('fonts/SimiansBlogStandard.eot');
+	src:url('fonts/SimiansBlogStandard.eot?#iefix') format('embedded-opentype'),
+		url('fonts/SimiansBlogStandard.svg#SimiansBlogStandard') format('svg'),
+		url('fonts/SimiansBlogStandard.woff') format('woff'),
+		url('fonts/SimiansBlogStandard.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'SimiansBlogStandard';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="ico-"]:before {
+*/
+.ico-arrow-up-left:before, .ico-arrow-up:before, .ico-arrow-up-right:before, .ico-arrow-right:before, .ico-arrow-down-right:before, .ico-arrow-down:before, .ico-arrow-down-left:before, .ico-arrow-left:before, .ico-arrow-left-2:before, .ico-arrow-down-2:before, .ico-arrow-up-2:before, .ico-arrow-right-2:before, .ico-arrow-left-3:before, .ico-arrow-down-3:before, .ico-arrow-up-3:before, .ico-arrow-right-3:before, .ico-undo:before, .ico-redo:before, .ico-undo-2:before, .ico-redo-2:before, .ico-forward:before, .ico-reply:before, .ico-loop:before, .ico-arrow-right-4:before, .ico-arrow-left-4:before, .ico-arrow-up-4:before, .ico-arrow-down-4:before, .ico-arrow-down-left-2:before, .ico-arrow-down-right-2:before, .ico-arrow-up-left-2:before, .ico-arrow-up-right-2:before, .ico-menu:before, .ico-play:before, .ico-pause:before, .ico-forward-2:before, .ico-backward:before, .ico-first:before, .ico-last:before, .ico-stop:before, .ico-previous:before, .ico-next:before, .ico-eject:before, .ico-volume-mute:before, .ico-volume-low:before, .ico-volume-mute-2:before, .ico-off:before, .ico-bolt:before, .ico-connection:before, .ico-alert:before, .ico-move:before, .ico-expand:before, .ico-home:before, .ico-flag:before, .ico-fire:before, .ico-calendar:before, .ico-shopping-cart:before, .ico-pencil:before, .ico-clock:before, .ico-key:before, .ico-wrench:before, .ico-cog:before, .ico-heart:before, .ico-star:before, .ico-folder-close:before, .ico-folder-open:before, .ico-file:before, .ico-copy:before, .ico-envelope:before, .ico-envelope-2:before, .ico-suitcase:before, .ico-user:before, .ico-user-2:before, .ico-print:before, .ico-tag:before, .ico-locked:before, .ico-unlocked:before, .ico-notebook:before, .ico-bookmark:before, .ico-link:before, .ico-zoom-out:before, .ico-magnifier:before, .ico-zoom-in:before, .ico-blocked:before, .ico-plus:before, .ico-circle-arrow-left:before, .ico-circle-arrow-up:before, .ico-circle-arrow-right:before, .ico-circle-blank:before, .ico-circle:before, .ico-circle-arrow-down:before, .ico-pin:before, .ico-pin-2:before, .ico-question:before, .ico-exclamation-sign:before, .ico-warning:before, .ico-spam:before, .ico-light-bulb:before, .ico-profile:before, .ico-picture:before, .ico-clipboard:before, .ico-clipboard-2:before, .ico-minus-sign:before, .ico-minus:before, .ico-plus-2:before, .ico-feather:before, .ico-paperplane:before, .ico-air:before, .ico-history:before, .ico-ying-yang:before, .ico-coin:before, .ico-medal:before, .ico-lab:before, .ico-3d-glasses:before, .ico-site-map:before, .ico-pictures:before, .ico-cogs:before, .ico-space-invaders:before, .ico-cube:before, .ico-pil:before, .ico-injection:before, .ico-attachment:before, .ico-stats:before, .ico-stats-2:before, .ico-download:before, .ico-piano:before, .ico-globe:before, .ico-atom:before, .ico-qrcode:before, .ico-barcode:before, .ico-equalizer:before, .ico-spinner:before, .ico-spinner-2:before, .ico-spinner-3:before, .ico-meter:before, .ico-rocket:before, .ico-happy:before, .ico-tongue:before, .ico-sad:before, .ico-wink:before, .ico-grin:before, .ico-cool:before, .ico-angry:before, .ico-evil:before, .ico-shocked:before, .ico-confused:before, .ico-wondering:before, .ico-neutral:before, .ico-smiley:before, .ico-users:before {
+	font-family: 'SimiansBlogStandard';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.ico-arrow-up-left:before {
+	content: "\e008";
+}
+.ico-arrow-up:before {
+	content: "\e009";
+}
+.ico-arrow-up-right:before {
+	content: "\e00a";
+}
+.ico-arrow-right:before {
+	content: "\e00b";
+}
+.ico-arrow-down-right:before {
+	content: "\e00c";
+}
+.ico-arrow-down:before {
+	content: "\e00d";
+}
+.ico-arrow-down-left:before {
+	content: "\e00e";
+}
+.ico-arrow-left:before {
+	content: "\e00f";
+}
+.ico-arrow-left-2:before {
+	content: "\e010";
+}
+.ico-arrow-down-2:before {
+	content: "\e011";
+}
+.ico-arrow-up-2:before {
+	content: "\e012";
+}
+.ico-arrow-right-2:before {
+	content: "\e013";
+}
+.ico-arrow-left-3:before {
+	content: "\e014";
+}
+.ico-arrow-down-3:before {
+	content: "\e015";
+}
+.ico-arrow-up-3:before {
+	content: "\e016";
+}
+.ico-arrow-right-3:before {
+	content: "\e017";
+}
+.ico-undo:before {
+	content: "\e018";
+}
+.ico-redo:before {
+	content: "\e019";
+}
+.ico-undo-2:before {
+	content: "\e01a";
+}
+.ico-redo-2:before {
+	content: "\e01b";
+}
+.ico-forward:before {
+	content: "\e01c";
+}
+.ico-reply:before {
+	content: "\e01d";
+}
+.ico-loop:before {
+	content: "\e01e";
+}
+.ico-arrow-right-4:before {
+	content: "\e000";
+}
+.ico-arrow-left-4:before {
+	content: "\e001";
+}
+.ico-arrow-up-4:before {
+	content: "\e002";
+}
+.ico-arrow-down-4:before {
+	content: "\e003";
+}
+.ico-arrow-down-left-2:before {
+	content: "\e004";
+}
+.ico-arrow-down-right-2:before {
+	content: "\e005";
+}
+.ico-arrow-up-left-2:before {
+	content: "\e006";
+}
+.ico-arrow-up-right-2:before {
+	content: "\e007";
+}
+.ico-menu:before {
+	content: "\e01f";
+}
+.ico-play:before {
+	content: "\e020";
+}
+.ico-pause:before {
+	content: "\e021";
+}
+.ico-forward-2:before {
+	content: "\e022";
+}
+.ico-backward:before {
+	content: "\e023";
+}
+.ico-first:before {
+	content: "\e024";
+}
+.ico-last:before {
+	content: "\e025";
+}
+.ico-stop:before {
+	content: "\e026";
+}
+.ico-previous:before {
+	content: "\e027";
+}
+.ico-next:before {
+	content: "\e028";
+}
+.ico-eject:before {
+	content: "\e029";
+}
+.ico-volume-mute:before {
+	content: "\e02a";
+}
+.ico-volume-low:before {
+	content: "\e02b";
+}
+.ico-volume-mute-2:before {
+	content: "\e02c";
+}
+.ico-off:before {
+	content: "\f011";
+}
+.ico-bolt:before {
+	content: "\e02d";
+}
+.ico-connection:before {
+	content: "\e02e";
+}
+.ico-alert:before {
+	content: "\e02f";
+}
+.ico-move:before {
+	content: "\e03b";
+}
+.ico-expand:before {
+	content: "\e03c";
+}
+.ico-home:before {
+	content: "\e030";
+}
+.ico-flag:before {
+	content: "\e031";
+}
+.ico-fire:before {
+	content: "\e032";
+}
+.ico-calendar:before {
+	content: "\f073";
+}
+.ico-shopping-cart:before {
+	content: "\f07a";
+}
+.ico-pencil:before {
+	content: "\e033";
+}
+.ico-clock:before {
+	content: "\e034";
+}
+.ico-key:before {
+	content: "\e06b";
+}
+.ico-wrench:before {
+	content: "\f0ad";
+}
+.ico-cog:before {
+	content: "\f013";
+}
+.ico-heart:before {
+	content: "\f004";
+}
+.ico-star:before {
+	content: "\e035";
+}
+.ico-folder-close:before {
+	content: "\f07b";
+}
+.ico-folder-open:before {
+	content: "\f07c";
+}
+.ico-file:before {
+	content: "\e036";
+}
+.ico-copy:before {
+	content: "\e037";
+}
+.ico-envelope:before {
+	content: "\e111";
+}
+.ico-envelope-2:before {
+	content: "\e112";
+}
+.ico-suitcase:before {
+	content: "\f0f2";
+}
+.ico-user:before {
+	content: "\e038";
+}
+.ico-user-2:before {
+	content: "\e03d";
+}
+.ico-print:before {
+	content: "\e03e";
+}
+.ico-tag:before {
+	content: "\e0ac";
+}
+.ico-locked:before {
+	content: "\e0b9";
+}
+.ico-unlocked:before {
+	content: "\e0b8";
+}
+.ico-notebook:before {
+	content: "\e03f";
+}
+.ico-bookmark:before {
+	content: "\e040";
+}
+.ico-link:before {
+	content: "\e041";
+}
+.ico-zoom-out:before {
+	content: "\e072";
+}
+.ico-magnifier:before {
+	content: "\e06f";
+}
+.ico-zoom-in:before {
+	content: "\e070";
+}
+.ico-blocked:before {
+	content: "\e042";
+}
+.ico-plus:before {
+	content: "\e043";
+}
+.ico-circle-arrow-left:before {
+	content: "\f0a8";
+}
+.ico-circle-arrow-up:before {
+	content: "\f0aa";
+}
+.ico-circle-arrow-right:before {
+	content: "\f0a9";
+}
+.ico-circle-blank:before {
+	content: "\f10c";
+}
+.ico-circle:before {
+	content: "\f111";
+}
+.ico-circle-arrow-down:before {
+	content: "\f0ab";
+}
+.ico-pin:before {
+	content: "\e0e2";
+}
+.ico-pin-2:before {
+	content: "\e0e1";
+}
+.ico-question:before {
+	content: "\e045";
+}
+.ico-exclamation-sign:before {
+	content: "\f06a";
+}
+.ico-warning:before {
+	content: "\e047";
+}
+.ico-spam:before {
+	content: "\e046";
+}
+.ico-light-bulb:before {
+	content: "\e048";
+}
+.ico-profile:before {
+	content: "\e0e6";
+}
+.ico-picture:before {
+	content: "\f03e";
+}
+.ico-clipboard:before {
+	content: "\e15a";
+}
+.ico-clipboard-2:before {
+	content: "\e15b";
+}
+.ico-minus-sign:before {
+	content: "\f056";
+}
+.ico-minus:before {
+	content: "\f068";
+}
+.ico-plus-2:before {
+	content: "\e049";
+}
+.ico-feather:before {
+	content: "\e044";
+}
+.ico-paperplane:before {
+	content: "\e04a";
+}
+.ico-air:before {
+	content: "\e04b";
+}
+.ico-history:before {
+	content: "\e04c";
+}
+.ico-ying-yang:before {
+	content: "\e14d";
+}
+.ico-coin:before {
+	content: "\e04d";
+}
+.ico-medal:before {
+	content: "\e069";
+}
+.ico-lab:before {
+	content: "\e0fe";
+}
+.ico-3d-glasses:before {
+	content: "\e05c";
+}
+.ico-site-map:before {
+	content: "\e04f";
+}
+.ico-pictures:before {
+	content: "\e050";
+}
+.ico-cogs:before {
+	content: "\e0bb";
+}
+.ico-space-invaders:before {
+	content: "\e07b";
+}
+.ico-cube:before {
+	content: "\e0b5";
+}
+.ico-pil:before {
+	content: "\e08a";
+}
+.ico-injection:before {
+	content: "\e08b";
+}
+.ico-attachment:before {
+	content: "\e0dc";
+}
+.ico-stats:before {
+	content: "\e0fb";
+}
+.ico-stats-2:before {
+	content: "\e0fc";
+}
+.ico-download:before {
+	content: "\e0fd";
+}
+.ico-piano:before {
+	content: "\e11c";
+}
+.ico-globe:before {
+	content: "\e14b";
+}
+.ico-atom:before {
+	content: "\e148";
+}
+.ico-qrcode:before {
+	content: "\e051";
+}
+.ico-barcode:before {
+	content: "\e052";
+}
+.ico-equalizer:before {
+	content: "\e053";
+}
+.ico-spinner:before {
+	content: "\e054";
+}
+.ico-spinner-2:before {
+	content: "\e055";
+}
+.ico-spinner-3:before {
+	content: "\e056";
+}
+.ico-meter:before {
+	content: "\e058";
+}
+.ico-rocket:before {
+	content: "\e059";
+}
+.ico-happy:before {
+	content: "\e05a";
+}
+.ico-tongue:before {
+	content: "\e05b";
+}
+.ico-sad:before {
+	content: "\e05d";
+}
+.ico-wink:before {
+	content: "\e05e";
+}
+.ico-grin:before {
+	content: "\e05f";
+}
+.ico-cool:before {
+	content: "\e060";
+}
+.ico-angry:before {
+	content: "\e061";
+}
+.ico-evil:before {
+	content: "\e062";
+}
+.ico-shocked:before {
+	content: "\e063";
+}
+.ico-confused:before {
+	content: "\e064";
+}
+.ico-wondering:before {
+	content: "\e065";
+}
+.ico-neutral:before {
+	content: "\e066";
+}
+.ico-smiley:before {
+	content: "\e067";
+}
+.ico-users:before {
+	content: "\e039";
+}

@@ -1,0 +1,7 @@
+Name: FieldbookERP Theme
+Author: Steawrt Hines - NineCollective
+Website: http://www.ninecollective.com
+Description: Based off the the BlankNoggin theme this is a custom theme for FieldbookERP, a NineCollective Product.
+Version: 1.0
+Tags: FieldbookERP, Fieldbook, Oilfield, NineCollective
+Zones: BeforeContent, ArticleFirst, AsideFirst, Content, ThirdsOne, ThirdsTwo, ThirdsThree, AfterContent, TaxNav

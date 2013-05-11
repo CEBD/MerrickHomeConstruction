@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Placement>
+  <Place Parts_Feature = "Content:5"/>
+  <Place Parts_Feature_Edit="Content:1"/>
+  <Match ContentType="Feature" >
+    <Match DisplayType="Detail">
+
+      <Place Parts_Title ="Content:1"></Place>
+      <!--Teaser-->
+      <Place Fields_MediaPicker-TeaserBannerFeatureImage="Content:1"
+             Fields_Common_Text-TeaserBannerFeatureCallout="Content:1.1"/>
+      <Place Fields_MediaPicker-TeaserLeftFeatureImage="TeaserLeftFeature:1"
+             Fields_Common_Text-TeaserLeftFeatureCallout="TeaserLeftFeature:1.1"/>
+      <Place Fields_MediaPicker-TeaserRightFeatureImage="TeaserRightFeature:1"
+             Fields_Common_Text-TeaserRightFeatureCallout="TeaserRightFeature:1.1"/>
+
+      <Place Fields_Common_Text-FeatureTeaser ="Content:2"/>
+
+      <!--Learn More-->
+      <Place Fields_Common_Text-LearnMoreBannerFeatureCallout="Content:2.1.1"/>
+      <Place Fields_MediaPicker-LearnMoreLeftFeatureImage="Content:3.2"/>
+      <Place Fields_Common_Text-LearnMoreLeftFeatureCallout="Content:3.2.1"/>
+      <Place Fields_MediaPicker-LearnMoreRightFeatureImage="Content:3.3"/>
+      <Place Fields_Common_Text-LearnMoreRightFeatureCallout="Content:3.3.1"/>
+      <Place Fields_Common_Text-FeatureLearnMore ="Content:4"/>
+      <Place Fields_MediaPicker-LearnMoreBannerFeatureImage="Content:5.1"/>
+    </Match>
+    <Match DisplayType="Summary">
+
+      <Place Parts_Title ="Content:1"></Place>
+      <!--Teaser-->
+      <Place Fields_MediaPicker-TeaserBannerFeatureImage="Content:1"
+             Fields_Common_Text-TeaserBannerFeatureCallout="Content:1.1"/>
+      <Place Fields_MediaPicker-TeaserLeftFeatureImage="TeaserLeftFeature:1"
+             Fields_Common_Text-TeaserLeftFeatureCallout="TeaserLeftFeature:1.1"/>
+      <Place Fields_MediaPicker-TeaserRightFeatureImage="TeaserRightFeature:1"
+             Fields_Common_Text-TeaserRightFeatureCallout="TeaserRightFeature:1.1"/>
+
+      <Place Fields_Common_Text-FeatureTeaser ="Content:2"/>
+    </Match>
+  </Match>
+</Placement>

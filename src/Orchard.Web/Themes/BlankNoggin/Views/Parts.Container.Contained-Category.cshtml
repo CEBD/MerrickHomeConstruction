@@ -1,0 +1,29 @@
+﻿@Display(Model.List)
+
+
+@*@using Orchard.ContentManagement;
+@{
+    IEnumerable<object> features = Model.List;
+}
+@if (features == null || features.Count() < 1)
+{
+    <p>@T("No features.")</p>
+}
+
+
+
+else {
+    <ul class="content-items">
+    @foreach (dynamic feature in features)
+    {
+        string title = feature.Title;
+        ContentItem item = feature.ContentItem;
+        <li class="content-item-summary">
+            @Html.ItemDisplayLink(title, item)
+        </li>
+    }
+    </ul>
+}
+
+
+@Display(Model.Pager)*@

@@ -1,0 +1,23 @@
+﻿<Placement>
+	<Match DisplayType="Detail">
+		<Place Parts_Tags_ShowTags="Footer:1"/>
+	</Match>
+	<!--<Match DisplayType="Summary">
+    <Place Parts_Common_Metadata_Summary="Nowhere" />
+		<Place Parts_Tags_ShowTags="Nowhere"/>
+		<Place Parts_Comments_Count="Nowhere" />
+    <Place Parts_Common_Body="Content" />
+    <Place Parts_Common_Body_Summary="Nowhere" />
+    <Place Fields_Contrib_TaxonomyField="Nowhere" />
+  </Match>-->
+
+
+  <Match ContentType="Page">
+    <Place Parts_Common_Metadata="-"/>
+  </Match>
+
+  <Match Path="~/">
+    <Place Parts_Title="-"></Place>
+  </Match>
+  
+</Placement>

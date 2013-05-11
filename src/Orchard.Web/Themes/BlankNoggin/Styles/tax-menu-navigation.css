@@ -1,0 +1,132 @@
+﻿/*===========================
+    Taxonomie & SubNavigation
+===========================*/
+
+/*==== Push the zone down so it clears the Header Image ====*/
+
+.zone.zone-tax-nav {
+    
+}
+
+.widget-tax-nav.widget-menu-widget.widget {
+}
+
+    .widget-tax-nav.widget-menu-widget.widget nav.nav {
+    }
+
+
+.zone.zone-tax-nav {
+}
+
+/*==== Menu Body ====*/
+
+.taxonomy-menu {
+    
+    background: #242424;
+    text-align: center;
+    border: 1px solid #666;
+    width: 216px;
+    position: fixed;
+    display: block;
+    
+
+}
+
+    /*==== Header ====*/
+    .taxonomy-menu header {
+        padding: 2.5% 0;
+        border-bottom: 1px solid #666;
+        
+    }
+
+        .taxonomy-menu header h3 {
+            color: #ccc;
+            font-style: italic;
+        }
+
+    /*==== Menu ====*/
+    .taxonomy-menu div.tax-menu-navigation {
+        display: block;
+        
+        min-height: 45px;
+        width: 100%;
+    }
+
+.tax-menu-navigation ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    
+}
+
+
+.taxonomy-menu li {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 46px;
+}
+
+    .taxonomy-menu li a {
+        color: white;
+        width: 100%;
+        display: block;
+        margin: 0;
+        height: 35px;
+        padding-top: 10px;
+        background: #242424;
+        border-bottom: 1px solid #666;
+    }
+
+    .taxonomy-menu li:hover a {
+        background-color: white;
+        transition: all 550ms ease;
+        -webkit-transition: all 550ms ease;
+        text-decoration: none;
+    }
+
+.linkMenu_a.active {
+    background: #ffffff;
+    color: #2a94fe;
+}
+
+    .linkMenu_a.active:hover {
+        background-color: #666;
+        color: #fff;
+        transition: all 550ms ease;
+        -webkit-transition: all 550ms ease;
+        text-decoration: none;
+    }
+
+
+/*==== Footer ====*/
+.taxonomy-menu footer {
+    display: block;
+    width: 100%;
+    
+}
+
+.taxonomy-menu button:first-child {
+    margin-top: 10px;
+}
+
+.taxonomy-menu button {
+    font-size: 1em;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+h3.active {
+    color: white;
+    background-color: #2a93fd;
+    border-radius: 10px;
+
+}
+

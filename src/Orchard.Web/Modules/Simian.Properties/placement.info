@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Placement>
+    <Place Parts_PropertyAddress = "Content:5"/>
+    <Place Parts_PropertyAddress_Edit="Content:10"/>
+</Placement>

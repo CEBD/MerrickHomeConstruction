@@ -1,0 +1,52 @@
+﻿.callout-text {
+    color: red;
+    display: block;
+    float: left;
+    font-size: 25px;
+    /*position: relative;*/
+    width: 25%;
+    background-color: lightcyan;
+    
+    padding: 5px;
+}
+
+
+.TeaserBannerFeatureCallout {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.TeaserLeftFeatureCallout {
+    left: 0px;
+    top: 0px;
+}
+
+.TeaserRightFeatureCallout {
+    float: right;
+    right: 0px;
+    text-align: right;
+    top: 0px;
+}
+
+.LearnMoreBannerFeatureCallout {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.LearnMoreLeftFeatureCallout {
+    left: 0px;
+    top: 0px;
+}
+
+.LearnMoreRightFeatureCallout {
+    float: right;
+    right: 0px;
+    text-align: right;
+    top: 0px;
+}
+
+

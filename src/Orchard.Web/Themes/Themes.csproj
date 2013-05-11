@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Themes</RootNamespace>
+    <AssemblyName>Themes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\OrchardBasicCorrectness.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BlankNoggin\Content\background-lrg.jpg" />
+    <Content Include="BlankNoggin\Content\dozer.jpg" />
+    <Content Include="BlankNoggin\Content\fieldbook-fallback-logo.png" />
+    <Content Include="BlankNoggin\Content\fieldbook-logo.svg" />
+    <Content Include="BlankNoggin\Content\flagdrawing-2.jpg" />
+    <Content Include="BlankNoggin\Content\footer-bg-lrg.jpg" />
+    <Content Include="BlankNoggin\Content\nav.svg" />
+    <Content Include="BlankNoggin\Scripts\menu.js" />
+    <Content Include="BlankNoggin\Scripts\modernizr.custom.65354.js" />
+    <Content Include="BlankNoggin\Scripts\tax-menu-navigation.js" />
+    <Content Include="BlankNoggin\Styles\grid.css" />
+    <Content Include="BlankNoggin\Styles\Images\fieldbook-logo.svg" />
+    <Content Include="BlankNoggin\Styles\normalize.min.css" />
+    <Content Include="BlankNoggin\Styles\site-master.css" />
+    <Content Include="BlankNoggin\Styles\Site.css" />
+    <Content Include="BlankNoggin\Styles\tax-menu-navigation.css" />
+    <Content Include="BlankNoggin\Styles\waffles.css" />
+    <Content Include="BlankNoggin\Theme.png" />
+    <Content Include="BlankNoggin\Theme.txt" />
+    <Content Include="MerrickHomeConstruction\Scripts\BannerDoodle\cellular-automata\cellular-automata.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\parts\search.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\parts\sitetitle.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\simiansblog.js" />
+    <Content Include="MerrickHomeConstruction\Styles\debug.css" />
+    <Content Include="MerrickHomeConstruction\Styles\font.css" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BebasNeue\BebasNeue-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\Bevan\Bevan-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-Italic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Italic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-Bold-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\NeoGrey\neogreyregular-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Bold-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-BoldItalic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBold-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBoldItalic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Italic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Light-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-LightItalic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Regular-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Semibold-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-SemiboldItalic-webfont.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.dev.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\index.html" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\license.txt" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\lte-ie7.js" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\SimiansBlogStandard.dev.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\SimiansBlogStandard.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\style.css" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\index.html" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\lte-ie7.css" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\style.css" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\UIIcons\ui-icon.svg" />
+    <Content Include="MerrickHomeConstruction\Styles\navigator.css" />
+    <Content Include="MerrickHomeConstruction\Styles\parts\search.css" />
+    <Content Include="MerrickHomeConstruction\Styles\parts\sitetitle.css" />
+    <Content Include="MerrickHomeConstruction\Styles\reset.css" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-icons_222222_256x240.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-icons_454545_256x240.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-icons_888888_256x240.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\jquery-ui-1.10.0.custom.css" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="MerrickHomeConstruction\Styles\Site.css" />
+    <Content Include="MerrickHomeConstruction\Styles\waffles.css" />
+    <Content Include="MerrickHomeConstruction\Theme.png" />
+    <Content Include="MerrickHomeConstruction\Theme.txt" />
+    <Content Include="MerrickHomeConstruction\ThemeZonePreview.png" />
+    <Content Include="MerrickHomeConstruction\Views\assets\waffle-logo-large.png" />
+    <Content Include="SimiansBlog\Scripts\BannerDoodle\cellular-automata\cellular-automata.js" />
+    <Content Include="SimiansBlog\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="SimiansBlog\Scripts\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="SimiansBlog\Scripts\parts\search.js" />
+    <Content Include="SimiansBlog\Scripts\parts\sitetitle.js" />
+    <Content Include="SimiansBlog\Scripts\simiansblog.js" />
+    <Content Include="SimiansBlog\Styles\debug.css" />
+    <Content Include="SimiansBlog\Styles\font.css" />
+    <Content Include="SimiansBlog\Styles\fonts\arkitechlight.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\neogreyregular-webfont.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard.dev.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.dev.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\index.html" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\license.txt" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\lte-ie7.js" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\style.css" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\index.html" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\lte-ie7.css" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\style.css" />
+    <Content Include="SimiansBlog\Styles\fonts\spaceman-webfont.svg" />
+    <Content Include="SimiansBlog\Styles\fonts\ui-icon.svg" />
+    <Content Include="SimiansBlog\Styles\navigator.css" />
+    <Content Include="SimiansBlog\Styles\parts\search.css" />
+    <Content Include="SimiansBlog\Styles\parts\sitetitle.css" />
+    <Content Include="SimiansBlog\Styles\reset.css" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-icons_222222_256x240.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-icons_454545_256x240.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-icons_888888_256x240.png" />
+    <Content Include="SimiansBlog\Styles\simian\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="SimiansBlog\Styles\simian\jquery-ui-1.10.0.custom.css" />
+    <Content Include="SimiansBlog\Styles\simian\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="SimiansBlog\Styles\Site.css" />
+    <Content Include="SimiansBlog\Styles\waffles.css" />
+    <Content Include="SimiansBlog\Theme.png" />
+    <Content Include="SimiansBlog\Theme.txt" />
+    <Content Include="SimiansBlog\ThemeZonePreview.png" />
+    <Content Include="SimiansBlog\Views\assets\waffle-logo-large.png" />
+    <Content Include="TheAdmin\Scripts\admin.js" />
+    <Content Include="TheAdmin\Styles\ie.css" />
+    <Content Include="TheAdmin\Styles\ie7.css" />
+    <Content Include="TheAdmin\Styles\ie8.css" />
+    <Content Include="TheAdmin\Styles\images\adminNavBackground.gif" />
+    <Content Include="TheAdmin\Styles\images\icon-advisory.png" />
+    <Content Include="TheAdmin\Styles\images\icon-contribute.png" />
+    <Content Include="TheAdmin\Styles\images\icon-docs.png" />
+    <Content Include="TheAdmin\Styles\images\icon-friends.png" />
+    <Content Include="TheAdmin\Styles\images\icon-gallery.png" />
+    <Content Include="TheAdmin\Styles\images\icon-settings.png" />
+    <Content Include="TheAdmin\Styles\images\info.gif" />
+    <Content Include="TheAdmin\Styles\images\menu-default.png" />
+    <Content Include="TheAdmin\Styles\images\menu-glyph.png" />
+    <Content Include="TheAdmin\Styles\images\menuClosed.gif" />
+    <Content Include="TheAdmin\Styles\images\menuClosedHover.gif" />
+    <Content Include="TheAdmin\Styles\images\menuOpen.gif" />
+    <Content Include="TheAdmin\Styles\images\menuOpenHover.gif" />
+    <Content Include="TheAdmin\Styles\images\vinesBackgroundBottom.gif" />
+    <Content Include="TheThemeMachine\Styles\Site.css" />
+    <Content Include="TheThemeMachine\Theme.png" />
+    <Content Include="TheThemeMachine\Theme.txt" />
+    <Content Include="SafeMode\Content\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SafeMode\Styles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TheAdmin\Views\Pager.cshtml" />
+    <Content Include="TheAdmin\Views\OrchardVersion.cshtml" />
+    <Content Include="TheThemeMachine\ThemeZonePreview.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TheAdmin\Views\Menu.cshtml" />
+    <Content Include="TheThemeMachine\Views\Branding.cshtml" />
+    <Content Include="TheThemeMachine\Views\BadgeOfHonor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Styles\images\icons.png" />
+    <Content Include="TheAdmin\Styles\images\tableHeaderBackgroundRed.gif" />
+    <Content Include="TheAdmin\Styles\site.css" />
+    <Content Include="TheAdmin\Theme.txt" />
+    <Content Include="SafeMode\Views\Document.cshtml" />
+    <Content Include="TheAdmin\Views\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Styles\images\icons.psd" />
+    <Content Include="SafeMode\Content\orchard.ico" />
+    <Content Include="SafeMode\Styles\ie6.css" />
+    <Content Include="SafeMode\Styles\images\backgroundHeader.gif" />
+    <Content Include="SafeMode\Styles\images\backgroundVines.gif" />
+    <Content Include="SafeMode\Styles\images\orchardLogo.gif" />
+    <Content Include="SafeMode\Styles\site.css" />
+    <Content Include="SafeMode\Theme.png" />
+    <Content Include="SafeMode\Theme.txt" />
+    <Content Include="SafeMode\Views\Layout.cshtml" />
+    <Content Include="TheAdmin\Styles\images\backgroundGradient.gif" />
+    <Content Include="TheAdmin\Styles\images\backgroundHeader.gif" />
+    <Content Include="TheAdmin\Styles\images\orchardLogo.gif" />
+    <Content Include="TheAdmin\Theme.png" />
+    <Content Include="TheAdmin\Views\User.cshtml" />
+    <Content Include="TheAdmin\Views\Header.cshtml" />
+    <Content Include="TheThemeMachine\Views\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheThemeMachine\Styles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Scripts\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Styles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheThemeMachine\Placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Views\LocalMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Views\Title.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Orchard\Orchard.Framework.csproj">
+      <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>
+      <Name>Orchard.Framework</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheThemeMachine\Views\Pager.cshtml" />
+    <Content Include="TheThemeMachine\Views\Pager.First.cshtml" />
+    <Content Include="TheThemeMachine\Views\Pager.Last.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheAdmin\Views\ErrorPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SimiansBlog\Placement.info" />
+    <Content Include="SimiansBlog\Scripts\Web.config" />
+    <Content Include="SimiansBlog\Styles\fonts\arkitechlight.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\arkitechlight.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\arkitechlight.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\neogreyregular-webfont.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\neogreyregular-webfont.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\neogreyregular-webfont.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\spaceman-webfont.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\spaceman-webfont.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\spaceman-webfont.woff" />
+    <Content Include="SimiansBlog\Styles\fonts\ui-icon.eot" />
+    <Content Include="SimiansBlog\Styles\fonts\ui-icon.ttf" />
+    <Content Include="SimiansBlog\Styles\fonts\ui-icon.woff" />
+    <Content Include="SimiansBlog\Styles\Web.config" />
+    <Content Include="SimiansBlog\Views\FooterCopyright.cshtml" />
+    <Content Include="SimiansBlog\Views\Layout.cshtml" />
+    <Content Include="SimiansBlog\Views\Pager.cshtml" />
+    <Content Include="SimiansBlog\Views\Pager.First.cshtml" />
+    <Content Include="SimiansBlog\Views\Pager.Last.cshtml" />
+    <Content Include="SimiansBlog\Views\Parts\Blogs.recentBlogPosts.cshtml" />
+    <Content Include="SimiansBlog\Views\Parts\Search.SearchForm.cshtml" />
+    <Content Include="SimiansBlog\Views\SiteTitle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BlankNoggin\Content\background-cropped.psd" />
+    <Content Include="BlankNoggin\Content\background-lrg.psd" />
+    <Content Include="BlankNoggin\Content\Web.config" />
+    <Content Include="BlankNoggin\Placement.info" />
+    <Content Include="BlankNoggin\Scripts\Web.config" />
+    <Content Include="BlankNoggin\Styles\Images\Web.config" />
+    <Content Include="BlankNoggin\Styles\Web.config" />
+    <Content Include="BlankNoggin\Views\Content-11.cshtml" />
+    <Content Include="BlankNoggin\Views\Content-Catagory.cshtml" />
+    <Content Include="BlankNoggin\Views\Content-Feature.Summary.cshtml" />
+    <Content Include="BlankNoggin\Views\Content.cshtml" />
+    <Content Include="BlankNoggin\Views\Content.Summary.cshtml" />
+    <Content Include="BlankNoggin\Views\Layout.cshtml" />
+    <Content Include="BlankNoggin\Views\Menu.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Common.Body.Summary-Feature.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Common.Metadata-Category.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Container.Contained-Category.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Taxonomies.Menu-TaxNav.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Title-Catagory.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Title-Category.cshtml" />
+    <Content Include="BlankNoggin\Views\Parts.Title.Summary-Feature.cshtml" />
+    <Content Include="BlankNoggin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MerrickHomeConstruction\Placement.info" />
+    <Content Include="MerrickHomeConstruction\Scripts\Web.config" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BebasNeue\BebasNeue-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BebasNeue\BebasNeue-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\Bevan\Bevan-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\Bevan\Bevan-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\Bevan\Bevan-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-Italic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-Italic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-Italic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Bold-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Italic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Italic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-Italic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSans\Vera-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-Bold-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-Bold-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-Bold-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\BitstreamVeraSerif\VeraSerif-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\NeoGrey\neogreyregular-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\NeoGrey\neogreyregular-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\NeoGrey\neogreyregular-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Bold-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Bold-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Bold-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-BoldItalic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-BoldItalic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-BoldItalic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBold-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBold-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBold-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBoldItalic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBoldItalic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-ExtraBoldItalic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Italic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Italic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Italic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Light-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Light-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Light-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-LightItalic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-LightItalic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-LightItalic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Regular-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Regular-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Regular-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Semibold-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Semibold-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-Semibold-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-SemiboldItalic-webfont.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-SemiboldItalic-webfont.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\OpenSans\OpenSans-SemiboldItalic-webfont.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\fonts\SimiansBlogStandard.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\SimiansBlogStandard.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\SimiansBlogStandard.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\SimiansBlogStandard.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\SimiansBlogStandard16779\ui-icon\fonts\ui-icon.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\UIIcons\ui-icon.eot" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\UIIcons\ui-icon.ttf" />
+    <Content Include="MerrickHomeConstruction\Styles\fonts\UIIcons\ui-icon.woff" />
+    <Content Include="MerrickHomeConstruction\Styles\Web.config" />
+    <Content Include="MerrickHomeConstruction\Views\FooterCopyright.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Layout.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Pager.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Pager.First.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Pager.Last.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Parts\Blogs.recentBlogPosts.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\Parts\Search.SearchForm.cshtml" />
+    <Content Include="MerrickHomeConstruction\Views\SiteTitle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TheThemeMachine\Views\Wrapper\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>30320</DevelopmentServerPort>
+          <DevelopmentServerVPath>/OrchardLocal</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,40 @@
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+bin
+!lib/**/bin
+src/Orchard.Web/Media/Default
+
+
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult[s]
+
+[Bb]uild/
+[Ll]ogs/
+/[Pp]ackage/
+#NZBDrone specific
+*.db
+*.orig
+
+#buildDirectoryAndOtherNonsense
+build
+App_Data
+artifacts

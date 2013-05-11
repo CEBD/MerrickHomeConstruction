@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ClaySharp</id>
+    <version>1.0.0</version>
+    <title>ClaySharp</title>
+    <authors>BertrandLeRoy</authors>
+    <owners>BertrandLeRoy</owners>
+    <licenseUrl>http://clay.codeplex.com/license</licenseUrl>
+    <projectUrl>http://clay.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Clay is a dynamic C# type that will enable you to sculpt objects of any shape just as easily as in JavaScript or other dynamic languages.</description>
+    <summary>Clay is a dynamic C# type that will enable you to sculpt objects of any shape just as easily as in JavaScript or other dynamic languages.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <references>
+      <reference file="ClaySharp.dll" />
+    </references>
+  </metadata>
+</package>

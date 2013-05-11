@@ -1,0 +1,10 @@
+﻿Name: Simian.Properties
+AntiForgery: enabled
+Author: Jesse [the_Simian] and Amanda Harlin
+Website: http://www.simiansblog.com
+Version: 0.9
+OrchardVersion: 1.6
+Description: Simple Module that can be utilized for real estate properties.
+Features:
+    Simian.Properties:
+        Description: Simple Module that can be utilized for real estate properties. MIT Liscence

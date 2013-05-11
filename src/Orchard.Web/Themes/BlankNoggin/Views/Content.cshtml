@@ -1,0 +1,47 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    Layout.Title = Model.Title;
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+}
+<div class="@contentTypeClassName">
+    @*I can't imagine needing this.*@
+    <section class="show-desktop" style="height:200px;">
+        @if (Model.Header != null)
+        {
+            <header class="w-12" style="height:200px; margin:0;">
+                @Display(Model.Header)
+                @if (Model.Meta != null)
+                {
+                    <div class="metadata">
+                        @Display(Model.Meta)
+                    </div>
+                }
+            </header>
+        }
+    </section>
+    @if (Model.BeforeContent != null)
+    {
+        <section>
+            @Display(Model.BeforeConent)
+        </section>
+    }
+    <section>
+        @Display(Model.Content)
+    </section>
+    <section>
+    </section>
+
+
+
+
+    @if (Model.Footer != null)
+    {
+        <section>
+            <footer>
+                @Display(Model.Footer)
+            </footer>
+        </section>
+    }
+</div>
+
+

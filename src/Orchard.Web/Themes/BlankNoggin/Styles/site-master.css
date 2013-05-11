@@ -1,0 +1,382 @@
+﻿/*========================
+    NineCollective 2013
+========================*/
+
+
+/*===============
+    Typography
+===============*/
+html {
+    background: #202020 url(../Content/footer-bg-lrg.jpg) repeat top left fixed;
+}
+
+
+body {
+    /*16px;*/
+    font-size: 1em;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    color: #404040;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover, a:visited:hover {
+        text-decoration: underline;
+        color: #0061c1;
+    }
+
+    a:visited {
+        color: #607fb1;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1.5%;
+}
+
+h1, h2, h3, a {
+    color: #2a93fd;
+}
+
+h1 {
+    /*48px*/
+    font-size: 3em;
+}
+
+h2 {
+    /*32px;*/
+    font-size: 2em;
+}
+
+h3 {
+    /*24px*/
+    font-size: 1.5em;
+}
+
+h4 {
+    /*18px*/
+    font-size: 1.125em;
+}
+
+h5 {
+    /*16px - or Base*/
+    font-size: 1em;
+}
+
+h6 {
+    /*14px;*/
+    font-size: 0.875em;
+}
+
+/*==================================
+    Global Stuff & Helper Classes
+==================================*/
+
+
+
+.wrap {
+    background: #eeeef1;
+    position: relative;
+    left: 0;
+    right: 0;
+
+}
+
+hr {
+    width: 100%;
+    display: block;
+    outline: 0;
+    border: 0;
+    background-color: #ccc;
+    height: 1px;
+    margin-bottom: 2.4%;
+}
+
+button, a.button {
+    width: 100%;
+    padding: 2.3%;
+    font-size: 1.3em;
+    border: none;
+    outline: none;
+    background: #e6e6e6;
+    border: 1px solid #aaaaaa;
+}
+
+    button:hover, a.button:hover {
+        background: #f6f6f6;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active, a.button:active {
+        background: #eee;
+        box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+/*==== Zones, Shapes, ECT. ====*/
+
+/*================
+    Header & Nav
+================*/
+
+
+
+#pageHeader {
+    width: 100%;
+    background: #242424;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+    position: relative;
+    z-index: 25;
+    /*==== Define Height for the sake of IE9 ====*/
+    height: 86px;
+    overflow: hidden;
+}
+
+    #pageHeader .container {
+        background: none;
+        border: none;
+        padding: 0 2.3%;
+    }
+        /*Clears Bottom Margin on Grid Items*/
+        #pageHeader .container .grid-3, #pageHeader .container .grid-9 {
+            margin-bottom: 0;
+        }
+
+    #pageHeader .brand object {
+        /*==== Define Height for the sake of IE9 ====*/
+        height: 86px;
+    }
+
+
+nav ul.menu.menu-main-menu {
+    text-align: right;
+    color: #eee;
+    padding-top: 2%;
+}
+
+    nav ul.menu.menu-main-menu li {
+        display: inline-block;
+        margin-left: 3.59%;
+    }
+
+nav ul li:last-child {
+}
+
+nav ul li a, nav ul li.current a:hover, nav ul li a:visited {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1.125em;
+    line-height: 2.125em;
+    font-weight: normal;
+}
+
+    nav ul li a:hover, nav ul li.current a, nav ul li.current:visited {
+        color: #ffffff !important;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+
+/*This is the clickable thing. It's outside the media query so that browsers that don't see media queries can see the display none and ignore it.*/
+.nav-mobile {
+    display: none; /* Hide from browsers that don't support media queries */
+    cursor: pointer;
+    content: "Menu";
+    top: 0;
+    right: 0;
+    background: url(../Content/nav.svg) no-repeat center center;
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+
+
+/*==================
+    Featured Zone
+==================*/
+
+
+#featured {
+    background: url(../Content/background-lrg.jpg)fixed no-repeat;
+    top: 0px;
+    width: 100%;
+    max-width: 1996px;
+    height: 400px;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 -5px 8px rgba(0,0,0, 0.3);
+    box-shadow: inset 0 -5px 8px rgba(0,0,0, 0.3);
+    /*position: relative;*/
+    z-index: 0;
+}
+
+    #featured .waffles {
+        border: none;
+        background: none;
+        padding-top: 2%;
+    }
+
+
+    #featured .zone-featured {
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
+
+    #featured article {
+        padding: 4.8%;
+    }
+
+    #featured iframe {
+        background: transparent;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
+
+
+/*=====================
+    Main Content Zone
+=====================*/
+
+#mainContent {
+    position: relative;
+    z-index: 20;
+    top: -20px;
+}
+
+/*Divider Images*/
+
+.zone-divider-image {
+    height: 260px;
+    margin-bottom: 2.4%;
+    margin-top: -3.4%;
+}
+
+.widget-divider-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 222px;
+    display: block;
+    position: absolute;
+    left: 0;
+    padding-bottom: 2.4%;
+}
+
+    .widget-divider-image img {
+        height: 222px;
+    }
+
+
+    .widget-divider-image h1 {
+        position: absolute;
+        font-weight: 200;
+        color: #fff;
+        bottom: 3.4%;
+        left: 3.4%;
+    }
+
+
+.list-items.content-items {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+span.filler {
+    display: none;
+}
+
+span.callout-text {
+    display: block;
+}
+
+.category-intro {
+    font-size: 1.125em;
+    line-height: 1.5em;
+    color: #888;
+}
+
+
+.callout-text, .callout-text p {
+    font-size: 1.4em;
+    line-height: normal;
+    font-weight: bold;
+    font-style: italic;
+    color: #e34c30;
+}
+
+/*==== Buttons - States and Individual Buttons ====*/
+
+button.ui-state-exectue, #callToActionButtons button#emailButton {
+    background: #2a96fe;
+    color: #ffffff;
+    border-color: #0061c1;
+}
+
+    button.ui-state-exectue:hover, #callToActionButtons button#emailButton:hover {
+        background-color: #8fc7fe;
+    }
+
+    button.ui-state-exectue:active, #callToActionButtons button#emailButton:active {
+        background-color: #2a96fe;
+    }
+
+
+
+/*=====================
+    Footer Area
+=====================*/
+footer#page-footer {
+    width: 100%;
+    
+    box-shadow: inset 0 3px 8px rgba(0,0,0,0.3);
+
+}
+
+#page-footer .waffles {
+    background: none;
+    border: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /*==== Responsive Menu ====*/
+    .nav-mobile {
+        display: block;
+        width: 100%;
+    }
+    /*His nav-list*/
+    .menu-main-menu {
+        display: none;
+        background: #404040;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .grid-9.main-nav {
+        width: 100%;
+    }
+
+    nav ul.menu.menu-main-menu li {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .nav-active {
+        display: block;
+    }
+
+    .nav-mobile-open {
+    }
+}

@@ -1,0 +1,20 @@
+﻿@using Orchard.Utility.Extensions;
+
+@{
+    Style.Include("feature-callout");
+}
+
+@{
+    string name = Model.ContentField.Name;
+
+    string calloutTextClass = Model.ContentField.Name.Contains("Callout") ? "callout-text" : "";
+    
+    //string type = Model.ContentField.FieldDefinition.Name;
+}
+
+@if (HasText(name) && HasText(Model.Value)) {
+    
+    <span class="@calloutTextClass value @name">@(new MvcHtmlString(Html.Encode((HtmlString) Model.Value).ReplaceNewLinesWith("<br />")))</span>
+
+}
+

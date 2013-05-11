@@ -1,0 +1,21 @@
+﻿@{
+    // Model is Model.Menu from the layout (Layout.Menu)
+    Script.Require("jQuery");
+    Script.Include("menu.js");
+
+    var tag = Tag(Model, "ul");
+
+    var items = (IList<dynamic>)Enumerable.Cast<dynamic>(Model.Items);
+
+    if (items.Any()) {
+        items[0].Classes.Add("first");
+        items[items.Count - 1].Classes.Add("last");
+    }    
+}
+<nav class="nav">
+    @tag.StartElement
+    @* see MenuItem shape template *@
+    @DisplayChildren(Model)
+    @tag.EndElement
+</nav>
+

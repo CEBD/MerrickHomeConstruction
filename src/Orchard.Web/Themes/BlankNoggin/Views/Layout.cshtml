@@ -1,0 +1,124 @@
+﻿@{
+    Script.Require("ShapesBase");
+    Script.Include("modernizr.custom.65354.js");
+    Style.Include("normalize.min.css");
+    //Style.Include("grid.css");
+    Style.Include("waffles.css");
+    Style.Include("site-master.css");
+
+    
+}
+
+@*//Header*@
+<header id="pageHeader">
+    <div class="waffles">
+        <section class="w-12 w-alpha w-omega">
+            <div class="w-8 w-alpha w-fix brand">
+          @*      <object data="fieldbook-logo.svg" type="image/svg+xml">
+                    <a href="fieldbook-logo.svg">
+                        <!-- [if lte IE 8 ]-->
+                        <img src="fieldbook-fallback-logo.png" />
+                    <!--[endif]-->
+                    </a>
+                </object>*@
+
+                <img src=@Url.Content(Html.ThemePath(WorkContext.CurrentTheme, "/Content/fieldbook-fallback-logo.png")) />
+
+            </div>
+            <div class="w-auto main-nav">
+                @Display(Model.Navigation)
+            </div>
+        </section>
+    </div>
+</header>
+
+@* Featured Content *@
+@if (Model.Featured != null)
+{    
+    <div id="featured" class="show-desktop">
+        <div class="waffles">
+            <section class="w-12 ">
+                <div class="w-6 w-alpha">
+                    @Display(Model.Featured)
+                </div>
+                <div class="w-6 w-omega">
+                    <iframe class="show-desktop" src="http://player.vimeo.com/video/31288625" width="500" height="286" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+}
+
+@* ALL CONTENT - Before Content, Content, After Content*@
+<div class="wrap">
+    <div id="mainContent" class="waffles">
+        @if (Model.BeforeContent != null)
+        {
+            <section class="w-12">
+                @Display(Model.BeforeContent)
+            </section>
+        }
+        <section class="w-12 ">
+            @if (Model.TaxNav != null)
+            {            
+                <div class="w-8 w-fix w-alpha show-desktop ">
+                    @Display(Model.TaxNav)
+                </div>            
+            }
+            <div class="w-auto">
+                @Display(Model.Content)
+            </div>
+
+        </section>
+        <section id="layout-thirds" class="w-12">
+            @if (Model.ThirdsOne != null)
+            {
+
+                <div id="thirds-one" class="w-auto">
+                    @Display(Model.ThirdsOne)
+                </div>
+            }
+            @if (Model.ThirdsTwo != null)
+            {
+
+                <div id="thirds-two" class="w-auto">
+                    @Display(Model.ThirdsTwo)
+                </div>
+            }
+            @if (Model.ThirdsThree != null)
+            {
+
+                <div id="thirds-three" class="w-auto">
+                    @Display(Model.ThirdsThree)
+                </div>
+            }
+        </section>
+        <section>
+            @Display(Model.AfterContent)
+        </section>
+        @if (Model.AsideSecond != null || Model.ArticleSecond != null)
+        {
+            <section id="layout-article-second-container">
+                <article id="article-second">
+                    @Display(Model.ArticleSecond)
+                </article>
+                <aside id="aside-second">
+                    @Display(Model.AsideSecond)
+                </aside>
+            </section>
+        }
+    </div>
+</div>
+
+<footer id="page-footer">
+    <div class="waffles">
+        <div class="w-12">
+            @if (Model.Footer != null)
+            {
+                @Display(Model.Footer)
+            }
+        </div>
+    </div>
+</footer>
+
+

@@ -1,0 +1,21 @@
+﻿@using Orchard.Search.ViewModels;
+@{
+    Style.Require("Search");
+    Style.Include("waffles.css");
+    Script.Include("~/Themes/SimiansBlog/Scripts/parts/search.js");
+    Style.Include("~/Themes/SimiansBlog/Styles/parts/search.css");
+   
+}
+@using (Html.BeginForm("index", "search", new { area = "Orchard.Search" }, FormMethod.Get, new { @class = "search-form theme-form-decoration-corners" }))
+{ 
+    <fieldset class="waffles">
+        <div class="w-12">
+            <div class="w-4 w-fix w-omega">
+                <button id="global-search" type="submit" class="theme-form-decoration-corners">@T("Search")</button>
+            </div>
+            <div class="w-auto">
+                @Html.TextBox("q", (SearchViewModel)Model.ViewModel.Query, new { @class = "part-search-searchbox theme-form-decoration-corners" })
+            </div>
+        </div>
+    </fieldset>
+}

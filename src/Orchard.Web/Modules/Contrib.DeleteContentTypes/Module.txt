@@ -1,0 +1,12 @@
+Name: Delete Content Types
+AntiForgery: enabled
+Author: Sebastien Ros
+Website: orcharddeletect.codeplex.com
+Version: 1.0
+OrchardVersion: 1.0
+Description: This modules provides a feature to delete dynamic content types.
+Features:
+    Contrib.DeleteContentTypes:
+        Description: This feature enables site owners to delete dynamic content types.
+        Category: Content
+        Dependencies: Contents

@@ -1,0 +1,402 @@
+﻿@using Orchard.UI.Resources
+@{
+    /*Simians Blog*/
+    /* Global Includes 
+    ***************************************************************/
+
+    SetMeta("X-UA-Compatible", "IE=edge,chrome=1");
+
+
+    /*Styles*/
+    Style.Include("reset.css");
+
+    Style.Include("waffles.css");
+    Style.Include("simian/jquery-ui-1.10.0.custom.css");
+
+    Style.Include("font.css");
+    Style.Include("site.css");
+
+    Style.Include("navigator.css");
+
+
+    Style.Include("debug.css");
+
+    /*Scripts*/
+    Script.Include("jquery-1.8.2.min.js").AtLocation(ResourceLocation.Head);
+    Script.Include("jquery-ui-1.10.0.custom.min.js").AtLocation(ResourceLocation.Head);
+    Script.Include("simiansblog.js").AtLocation(ResourceLocation.Head);
+
+    /* Some useful shortcuts or settings
+    ***************************************************************/
+    Func<dynamic, dynamic> Zone = x => Display(x);
+
+    /* Inserting some ad hoc shapes
+    ***************************************************************/
+
+    WorkContext.Layout.Header.Add(New.SiteTitle(), "0");
+    WorkContext.Layout.Footer.Add(New.FooterCopyright(), "5");
+    WorkContext.Layout.Footer.Add(New.User(), "10");
+
+    /* Last bit of code to prep the layout wrapper
+    ***************************************************************/
+
+    Model.Id = "Simians-Blog";
+    Model.Classes.Add("waffles site-wrapper");
+
+
+    dynamic tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
+}
+@tag.StartElement
+@if (Model.PreBody != null)
+{
+    <div id="Zone-PreBody" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+        @Zone(Model.PreBody)
+    </div>
+}
+@if (Model.Search != null || Model.Header != null)
+{
+    <div id="Zone-Title-Wrapper " class="w-12 w-alpha w-omega w-v-2">
+        @if (Model.Search != null)
+        {
+            <div id="Zone-Search" class="w-8 w-fix w-omega   zone-wrapper w-v-1">
+                @Zone(Model.Search)
+            </div>
+        }
+        @if (Model.Header != null)
+        {
+            <header id="Zone-Header" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.Header)
+            </header>
+        }
+    </div>
+}
+@if (Model.Navigation != null)
+{
+    <div id="Zone-Navigation" class="w-12 w-alpha w-omega zone-wrapper ">
+        @Zone(Model.Navigation)
+    </div>
+}
+@if (Model.Billboard != null)
+{
+    <div id="Zone-Billboard" class="w-12 w-alpha w-omega zone-wrapper w-v_1">
+        @Zone(Model.Billboard)
+    </div>
+}
+@if (Model.PreMain != null)
+{
+    <div id="Zone-PreMain" class="w-12 w-alpha w-omega zone-wrapper w-v-2">
+        @Zone(Model.PreMain)
+    </div>
+}
+<div id="Main-Wrapper" class="w-12 w-alpha w-omega w-v-2">
+    @if (Model.Messaging != null)
+    {
+        <div id="Zone-Messaging" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+            @Zone(Model.Messaging)
+        </div>
+    }
+    <div class="w-12 w-alpha w-omega">
+        @if (Model.SideAlpha != null)
+        {
+            <aside id="Zone-SideAlpha" class="w-9 w-pair-8 w-alpha w-fix zone-wrapper w-v-1">
+                @Zone(Model.SideAlpha)
+            </aside>
+        }
+        @if (Model.SideOmega != null)
+        {
+            <aside id="Zone-SideOmega" class="w-9 w-omega  w-fix zone-wrapper w-v-1">
+                @Zone(Model.SideOmega)
+            </aside>
+        }
+        <div id="Content-Wrapper" class="w-auto zone-wrapper w-v-1">
+            <div class="w-12 w-alpha w-omega">
+                @if (Model.PreContent != null)
+                {
+                    <div id="Zone-PreContent" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+                        @Zone(Model.PreContent)
+                    </div>
+                }
+                @if (Model.Content != null)
+                {
+                    <div id="Zone-Content" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+                        @Zone(Model.Content)
+                    </div>
+                }
+                @if (Model.ContentN_1 != null || Model.ContentN_2 != null || Model.ContentN_3 != null || Model.ContentN_4 != null || Model.ContentN_5 != null || Model.ContentN_6 != null || Model.ContentN_7 != null || Model.ContentN_8 != null || Model.ContentN_9 != null || Model.ContentN_10 != null || Model.ContentN_11 != null || Model.ContentN_12 != null)
+                {
+                    <div class="w-12 w-alpha w-omega">
+                        @if (Model.ContentN_1 != null)
+                        {
+                            <div id="Zone-Content-N-1" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_1)
+                            </div>
+                        }
+                        @if (Model.ContentN_2 != null)
+                        {
+                            <div id="Zone-Content-N-2" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_2)
+                            </div>
+                        }
+                        @if (Model.ContentN_3 != null)
+                        {
+                            <div id="Zone-Content-N-3" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_3)
+                            </div>
+                        }
+                        @if (Model.ContentN_4 != null)
+                        {
+                            <div id="Zone-Content-N-4" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_4)
+                            </div>
+                        }
+                        @if (Model.ContentN_5 != null)
+                        {
+                            <div id="Zone-Content-N-5" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_5)
+                            </div>
+                        }
+                        @if (Model.ContentN_6 != null)
+                        {
+                            <div id="Zone-Content-N-6" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_6)
+                            </div>
+                        }
+                        @if (Model.ContentN_7 != null)
+                        {
+                            <div id="Zone-Content-N-7" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_7)
+                            </div>
+                        }
+                        @if (Model.ContentN_8 != null)
+                        {
+                            <div id="Zone-Content-N-8" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_8)
+                            </div>
+                        }
+                        @if (Model.ContentN_9 != null)
+                        {
+                            <div id="Zone-Content-N-9" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_9)
+                            </div>
+                        }
+                        @if (Model.ContentN_10 != null)
+                        {
+                            <div id="Zone-Content-N-10" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_10)
+                            </div>
+                        }
+                        @if (Model.ContentN_11 != null)
+                        {
+                            <div id="Zone-Content-N-11" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_11)
+                            </div>
+                        }
+                        @if (Model.ContentN_12 != null)
+                        {
+                            <div id="Zone-Content-N-12" class="w-auto zone-wrapper w-v-1">
+                                @Zone(Model.ContentN_12)
+                            </div>
+                        }
+                    </div>
+                }
+                @if (Model.PostContent != null)
+                {
+                    <div id="Zone-PostContent" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+                        @Zone(Model.PostContent)
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@if (Model.PostMain != null)
+{
+    <div id="Zone-PostMain" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+        @Zone(Model.PostMain)
+    </div>
+}
+@if (Model.N_1 != null || Model.N_2 != null || Model.N_3 != null || Model.N_4 != null || Model.N_5 != null || Model.N_6 != null || Model.N_7 != null || Model.N_8 != null || Model.N_9 != null || Model.N_10 != null || Model.N_11 != null || Model.N_12 != null)
+{
+    <div id="Zone-N-Wrapper" class="w-12 w-alpha w-omega w-v-2">
+        @if (Model.N_1 != null)
+        {
+            <div id="Zone-N-1" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_1)
+            </div>
+        }
+        @if (Model.N_2 != null)
+        {
+            <div id="Zone-N-2" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_2)
+            </div>
+        }
+        @if (Model.N_3 != null)
+        {
+            <div id="Zone-N-3" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_3)
+            </div>
+        }
+        @if (Model.N_4 != null)
+        {
+            <div id="Zone-N-4" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_4)
+            </div>
+        }
+        @if (Model.N_4 != null)
+        {
+            <div id="Zone-N-4" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_4)
+            </div>
+        }
+        @if (Model.N_5 != null)
+        {
+            <div id="Zone-N-5" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_5)
+            </div>
+        }
+        @if (Model.N_6 != null)
+        {
+            <div id="Zone-N-6" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_6)
+            </div>
+        }
+        @if (Model.N_7 != null)
+        {
+            <div id="Zone-N-7" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_7)
+            </div>
+        }
+        @if (Model.N_8 != null)
+        {
+            <div id="Zone-N-8" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_8)
+            </div>
+        }
+        @if (Model.N_9 != null)
+        {
+            <div id="Zone-N-9" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_9)
+            </div>
+        }
+        @if (Model.N_10 != null)
+        {
+            <div id="Zone-N-10" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_10)
+            </div>
+        }
+        @if (Model.N_11 != null)
+        {
+            <div id="Zone-N-11" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_11)
+            </div>
+        }
+        @if (Model.N_12 != null)
+        {
+            <div id="Zone-N-12" class="w-auto zone-wrapper w-v-1">
+                @Zone(Model.N_12)
+            </div>
+        }
+    </div>
+}
+@if (Model.Footer != null || Model.FooterN_1 != null || Model.FooterN_2 != null || Model.FooterN_3 != null || Model.FooterN_4 != null || Model.FooterN_5 != null || Model.FooterN_6 != null || Model.FooterN_7 != null || Model.FooterN_8 != null || Model.FooterN_9 != null || Model.FooterN_10 != null || Model.FooterN_11 != null || Model.FooterN_12 != null)
+{
+    <footer class="w-12 w-alpha w-omega">
+        @if (Model.FooterN_1 != null || Model.FooterN_2 != null || Model.FooterN_3 != null || Model.FooterN_4 != null || Model.FooterN_5 != null || Model.FooterN_6 != null || Model.FooterN_7 != null || Model.FooterN_8 != null || Model.FooterN_9 != null || Model.FooterN_10 != null || Model.FooterN_11 != null || Model.FooterN_12 != null)
+        {
+        <div id="Zone-Footer-N-Wrapper" class="w-12 w-alpha w-omega">
+            @if (Model.FooterN_1 != null)
+            {
+                <div id="Zone-Footer-N-1" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_1)
+                </div>
+            }
+            @if (Model.FooterN_2 != null)
+            {
+                <div id="Zone-Footer-N-2" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_2)
+                </div>
+            }
+            @if (Model.FooterN_3 != null)
+            {
+                <div id="Zone-Footer-N-3" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_3)
+                </div>
+            }
+            @if (Model.FooterN_4 != null)
+            {
+                <div id="Zone-Footer-N-4" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_4)
+                </div>
+            }
+            @if (Model.FooterN_5 != null)
+            {
+                <div id="Zone-Footer-N-5" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_5)
+                </div>
+            }
+            @if (Model.FooterN_6 != null)
+            {
+                <div id="Zone-Footer-N-6" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_6)
+                </div>
+            }
+            @if (Model.FooterN_7 != null)
+            {
+                <div id="Zone-Footer-N-7" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_7)
+                </div>
+            }
+            @if (Model.FooterN_8 != null)
+            {
+                <div id="Zone-Footer-N-8" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_8)
+                </div>
+            }
+            @if (Model.FooterN_9 != null)
+            {
+                <div id="Zone-Footer-N-9" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_9)
+                </div>
+            }
+            @if (Model.FooterN_10 != null)
+            {
+                <div id="Zone-Footer-N-10" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_10)
+                </div>
+            }
+            @if (Model.FooterN_11 != null)
+            {
+                <div id="Zone-Footer-N-11" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_11)
+                </div>
+            }
+            @if (Model.FooterN_12 != null)
+            {
+                <div id="Zone-Footer-N-12" class="w-auto zone-wrapper w-v-1">
+                    @Zone(Model.FooterN_12)
+                </div>
+            }
+        </div>
+        }
+        @if (Model.Footer != null)
+        {
+            <div id="Zone-Footer" class="w-12 w-alpha w-omega zone-wrapper  ">
+                @Zone(Model.Footer)
+            </div>
+        }
+    </footer>
+}
+@if (Model.PostBody != null)
+{
+    <div id="Zone-PostBody" class="w-12 w-alpha w-omega zone-wrapper w-v-1">
+        @Zone(Model.PostBody)
+    </div>
+}
+
+
+
+@tag.EndElement
+
+
+
+

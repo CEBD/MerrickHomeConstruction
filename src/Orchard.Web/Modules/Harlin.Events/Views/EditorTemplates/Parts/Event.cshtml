@@ -1,0 +1,11 @@
+﻿
+@model Harlin.Events.Models.EventPart
+           
+@Script.Require("jQuery")
+
+<fieldset>
+    <legend>@T("Details")</legend>
+
+    @Html.LabelFor(m => m.Subtitle, T("Subtitle"))
+    @Html.EditorFor(m => m.Subtitle)
+</fieldset>
