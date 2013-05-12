@@ -18,7 +18,7 @@ Thumbs.db
 *.log
 bin
 !lib/**/bin
-src/Orchard.Web/Media/Default
+src/Orchard.Web/Media/Default/
 
 
 *.sbr
