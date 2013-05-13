@@ -19,7 +19,7 @@ Thumbs.db
 bin
 !lib/**/bin
 
-src/Orchard.Web/Media/
+src/Orchard.Web/Media/*
 !src/Orchard.Web/Media/OrchardLogo.png
 !src/Orchard.Web/Media/web.config
 
