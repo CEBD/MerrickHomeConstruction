@@ -1,13 +1,14 @@
 ﻿@model Simian.Properties.Models.PropertyAddressPart
-@Style.Include("PropertyAddressPartEdit")
-@Script.Require("jQuery")
-@Script.Include("PropertyAddressPartEdit")
-
-
+@{
+    Style.Include("PropertyAddressPartEdit");
+    Style.Require("Waffles");
+    Script.Require("jQuery");
+    Script.Include("PropertyAddressPartEdit");
+}
 <div class="waffles">
 
     <div class="w-12">
-        <fieldset class="w-3 w-alpha">
+        <fieldset class="w-4 w-alpha">
             <legend>@T("Details")</legend>
 
             @Html.LabelFor(m => m.Latitude, T("Latitude"))
@@ -16,23 +17,28 @@
             @Html.LabelFor(m => m.Longitude, T("Longitude"))
             @Html.EditorFor(m => m.Longitude)
 
-            @Html.LabelFor(m => m.City, T("City"))
-            @Html.EditorFor(m => m.City)
-
-            @Html.LabelFor(m => m.State, T("State"))
-            @Html.EditorFor(m => m.State)
-
-            @Html.LabelFor(m => m.Zipcode, T("Zipcode"))
-            @Html.EditorFor(m => m.Zipcode)
-
-            @Html.LabelFor(m => m.Street, T("Street"))
-            @Html.EditorFor(m => m.Street)
-
-
-        </fieldset>
-        <div class=" w-9 w-omega ">
-            <div class="bingmap w-12 w-alpha w-omega">
+            <div class="property-address-part-fields">
                 
+                @Html.LabelFor(m => m.Street, T("Street"))
+                @Html.EditorFor(m => m.Street)
+
+                @Html.LabelFor(m => m.City, T("City"))
+                @Html.EditorFor(m => m.City)
+
+                @Html.LabelFor(m => m.State, T("State"))
+                @Html.EditorFor(m => m.State)
+
+                @Html.LabelFor(m => m.Zipcode, T("Zipcode"))
+                @Html.EditorFor(m => m.Zipcode)
+
+
+            </div>
+            <br/>
+            <button id="check-google-button" type="button"> Generate Map </button>
+        </fieldset>
+        <div class=" w-8 w-omega ">
+            <div class="googlemap w-12 w-alpha w-omega">
+                &nbsp;
             </div>
         </div>
     </div>

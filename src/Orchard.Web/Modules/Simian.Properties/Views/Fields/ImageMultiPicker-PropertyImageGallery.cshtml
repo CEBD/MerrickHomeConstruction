@@ -1,0 +1,40 @@
+﻿@using Amba.ImagePowerTools.Fields
+@using Amba.ImagePowerTools.HtmlHelpers
+@using System.Linq
+@using Amba.ImagePowerTools.Settings
+@{
+    var field = (ImageMultiPickerField)Model.Field;
+    var settings = (ImageMultiPickerFieldSettings)Model.Settings;
+    Script.Require("jQuery");
+    Style.Require("Waffles");
+    Script.Include("PropertyImageGallery");
+    Style.Include("PropertyImageGallery");
+}
+
+@if (field.Images.Any())
+{
+    <div class="waffles property-imagegallery">
+        <div class="property-imagegallery-slidingframe">
+            @foreach (var image in field.Images)
+            {   
+                <div class="property-imagegallery-image-frame">
+
+
+
+                    @Html.ResizedImage(image.FilePath, htmlAttributes: new { alt = "", @class = "property-imagegallery-image-image" })
+
+                    @if (settings.CustomFieldsList.Any())
+                    {
+                        <div class="property-imagegallery-image-text">
+                            @foreach (var customFiled in settings.CustomFieldsList)
+                            {
+                                <span class="property-imagegallery-image-text-message">@image[customFiled.Name] </span>
+                            }
+                        </div>
+                    }
+                </div>
+        
+            }
+        </div>
+    </div>
+}

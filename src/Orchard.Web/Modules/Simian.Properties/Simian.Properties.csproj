@@ -68,6 +68,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\PropertyAddressPartEdit.js" />
+    <Content Include="Styles\PropertyAddressPartEdit.css" />
+    <Content Include="Styles\waffles.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\Web.config" />
@@ -84,13 +87,23 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Amba.ImagePowerTools\Amba.ImagePowerTools.csproj">
+      <Project>{c0b9c2b5-1620-4315-9e87-a2c2c5afd3ca}</Project>
+      <Name>Amba.ImagePowerTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contrib.Taxonomies\Contrib.Taxonomies.csproj">
+      <Project>{e649ea64-d213-461b-87f7-d67035801443}</Project>
+      <Name>Contrib.Taxonomies</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\PropertyAddressPartDriver.cs" />
     <Compile Include="Handlers\PropertyAddressHandler.cs" />
+    <Compile Include="Handlers\PropertyFeatureEventHandler.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\PropertyAddressPartRecord.cs" />
     <Compile Include="Models\PropertyAddressPart.cs" />
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -106,6 +119,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\ImageMultiPicker-PropertyImageGallery.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

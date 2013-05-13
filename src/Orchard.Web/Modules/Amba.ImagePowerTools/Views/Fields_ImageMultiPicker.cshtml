@@ -1,0 +1,32 @@
+﻿@using Amba.ImagePowerTools.Fields
+@using Amba.ImagePowerTools.HtmlHelpers
+@using System.Linq
+@using Amba.ImagePowerTools.Settings
+@{
+    var field = (ImageMultiPickerField) Model.Field;
+    var settings = (ImageMultiPickerFieldSettings) Model.Settings;
+}
+
+@if (field.Images.Any())
+{
+    <div class="image-item-list-box">
+        @foreach (var image in field.Images)
+        {   
+            <div class="image-item">
+                <a href="@Url.Content("~" + image.FilePath))" target="_blank">
+                    @Html.ResizedImage(image.FilePath, height:60, htmlAttributes: new { alt="", @class="pickerimage"}) 
+                </a>
+                @if (settings.CustomFieldsList.Any())
+                {
+                    <div>
+                        <div>Custom fields:</div> 
+                        @foreach (var customFiled in settings.CustomFieldsList)
+                        {
+                            <div> @customFiled.DisplayName: @image[customFiled.Name] </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
