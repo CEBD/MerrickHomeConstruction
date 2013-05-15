@@ -80,6 +80,16 @@ namespace Simian.Properties.Handlers
                 "Gated /Controlled Entrance",
                 "Bus/Public Transportation"
             });
+            //i wonder what is better, per room or per property occupancy? 
+            //some apts may have special adjustments for parents of newborn babies, like 'max occupancy: 2 + child up to 6 months of age'
+            CreateTaxonomy("MaxOccupancyPerRoom", new List<string> {
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+            });
+
             CreateTaxonomy("RentOrSale", new List<string> {"Rent","Sale"});
         }
 

@@ -37,6 +37,14 @@ namespace Simian.Properties
                                                                                                        .WithSetting("TaxonomyFieldSettings.SingleChoice", "False")
                                                                                                        .WithSetting("TaxonomyFieldSettings.Hint", "Please select the ammenities available on this property")
                                                                              )
+                                                                             .WithField("MaxOccupancyPerRoom", f =>
+                                                                                f.OfType("TaxonomyField")
+                                                                                 .WithDisplayName("MaxOccupancyPerRoom")
+                                                                                 .WithSetting("TaxonomyFieldSettings.Taxonomy", "MaxOccupancyPerRoom")
+                                                                                 .WithSetting("TaxonomyFieldSettings.LeavesOnly", "False")
+                                                                                 .WithSetting("TaxonomyFieldSettings.SingleChoice", "True")
+                                                                                 .WithSetting("TaxonomyFieldSettings.Hint", "Please select the maximum amount of occupants per room.")
+                                                                                 )
                                                                              .WithField("RentOrSale", f =>
                                                                                                       f.OfType("TaxonomyField")
                                                                                                        .WithDisplayName("RentOrSale")
@@ -59,10 +67,10 @@ namespace Simian.Properties
                                                                                                            .WithDisplayName("Bathrooms")
                                                                              )
                                                                              .WithField("FloorplanImage", f => f.OfType("MediaPickerField").WithDisplayName("Floor Plan")
-                                                                             
+
                                                                              )
                                                                              .WithField("PropertyImageGallery", f => f.OfType("ImageMultiPickerField").WithDisplayName("Property Image Gallery")
-                                                                             
+
                                                                              )
                 );
 
