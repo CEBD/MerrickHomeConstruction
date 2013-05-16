@@ -96,6 +96,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\FeatureFeatureEventHandler.cs" />
     <Compile Include="Migrations.cs" />
   </ItemGroup>
   <ItemGroup>

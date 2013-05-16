@@ -13,6 +13,17 @@ namespace Nine.FieldbookSales
                                                     partBuilder
                                                         .Attachable()
 
+
+                                                        .WithField("FeatureCategory", f =>
+                                                                                                        f.OfType("TaxonomyField")
+                                                                                                         .WithDisplayName("FeatureCategory")
+                                                                                                         .WithSetting("TaxonomyFieldSettings.Taxonomy", "FeatureCategory")
+                                                                                                         .WithSetting("TaxonomyFieldSettings.LeavesOnly", "False")
+                                                                                                         .WithSetting("TaxonomyFieldSettings.SingleChoice", "True")
+                                                                                                         .WithSetting("TaxonomyFieldSettings.Hint", "Please select what kind of feature you are posting.")
+                                                                             )
+
+
                                                         //Teaser
                                                         .WithField("TeaserBannerFeatureCallout", f => f.OfType("TextField").WithDisplayName("Teaser Banner  Callout"))
                                                         .WithField("TeaserLeftFeatureCallout", f => f.OfType("TextField").WithDisplayName("Teaser Left  Callout"))
