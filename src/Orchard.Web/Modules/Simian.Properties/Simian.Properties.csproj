@@ -69,7 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\PropertyAddressPartEdit.js" />
+    <Content Include="Scripts\PropertyImageGallery.js" />
     <Content Include="Styles\PropertyAddressPartEdit.css" />
+    <Content Include="Styles\PropertyImageGallery.css" />
     <Content Include="Styles\waffles.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />

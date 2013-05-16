@@ -2,65 +2,37 @@
 .feature-media-picker-field img{
     width: 100%;
     height: 100%;
+    max-height: 300px;
     padding: 0px;
 }
 
-.feature-media-picker-field {
+.feature-teaser, .feature-learnmore {
+    float: left;
     width: 100%;
-    display: block;
+}
+
+.feature-teaser-banner-frame, .feature-learnmore-banner-frame-top, .feature-learnmore-banner-frame-bottom {
     float: left;
     overflow: hidden;
-    padding: 10px;
-}
-
-.media-picker-field-teaser-banner-image {
     width: 100%;
-    max-height: 300px;
-    padding: 0px;
 }
 
-.media-picker-field-teaser-left-image {
+
+.feature-teaser-left-frame, .feature-learnmore-left-frame,.feature-teaser-right-frame, .feature-learnmore-right-frame {
     width: 25%;
-    max-height: 300px;
-    background-color: lightpink;
-    padding: 0px 5px 5px 0px;
-    
 }
 
-.media-picker-field-teaser-right-image  {
-    width: 25%;
+.feature-teaser-left-frame, .feature-learnmore-left-frame {
+    float: left;
+}
+
+.feature-teaser-right-frame, .feature-learnmore-right-frame {
     float: right;
-    max-height: 300px;
-    padding: 0px 0px 5px 5px;
 }
 
-.media-picker-field-learn-more-left-image {
-    width: 25%;
-    max-height: 300px;
-    background-color: lightpink;
-    padding: 0px 5px 5px 0px;
-    
-}
 
-.media-picker-field-learn-more-right-image  {
-    width: 25%;
-    float: right;
-    max-height: 300px;
-    padding: 0px 0px 5px 5px;
-}
 
-.media-picker-field-learn-more-banner-image {
-    width: 100%;
-    max-height: 300px;
-    padding: 0px;
-}
 
 .htmlWrapperContent {
-    background-color: orangered;
-    border: 1px solid red;
-    width: 25%;
-    float: right;
-    max-height: 300px;
-    padding: 0px 0px 5px 5px;
 
 }

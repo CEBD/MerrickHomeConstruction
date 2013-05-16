@@ -8,5 +8,5 @@ Description: Description for the module
 Features:
     Nine.FieldbookSales:
         Description: allow use of Feature ContentTypes 
-        Category: Content
+        Category: 
         Dependencies: Orchard.Fields, Contrib.Taxonomies
