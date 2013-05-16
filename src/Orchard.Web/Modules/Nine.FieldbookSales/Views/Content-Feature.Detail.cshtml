@@ -7,7 +7,7 @@
         Layout.Title = Model.Title;
     }
 
-    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    string contentTypeClassName = ((string) Model.ContentItem.ContentType).HtmlClassify();
 }
 <article class="content-item @contentTypeClassName">
     <header>
@@ -15,20 +15,78 @@
     </header>
     
     <article>
+        <div class="feature-teaser">
+            @if (Model.FeatureTeaserBannerFrame != null) {
+                <div class="feature-teaser-banner-frame">
+                    @Display(Model.FeatureTeaserBannerFrame)
+                </div>
+            }
+
+            @if (Model.FeatureTeaserLeftFrame != null)
+            {
+                <div class="feature-teaser-left-frame">
+                    @Display(Model.FeatureTeaserLeftFrame)
+                </div>
+            }
+
+            @if (Model.FeatureTeaserRightFrame != null)
+            {
+                <div class="feature-teaser-right-frame">
+                    @Display(Model.FeatureTeaserRightFrame)
+                </div>
+            }
         
-        <div class="htmlWrapperContent">
-            @Display(Model.TeaserRightFeature)
+            @if (Model.Teaser != null)
+            {
+                @Display(Model.Teaser)
+            }
         </div>
-        <div class="htmlWrapperContent">
-            @Display(Model.TeaserLeftFeature)
+        
+        <div class="feature-learnmore">
+            @if (Model.FeatureLearnMoreBannerFrameTop != null)
+            {
+                <div class="feature-learnmore-banner-frame-top">
+                    @Display(Model.FeatureLearnMoreBannerFrameTop)
+                </div>
+            }
+
+            @if (Model.FeatureLearnMoreLeftFrame != null)
+            {
+                <div class="feature-learnmore-left-frame">
+                    @Display(Model.FeatureLearnMoreLeftFrame)
+                </div>
+            }
+
+            @if (Model.FeatureLearnMoreRightFrame != null)
+            {
+                <div class="feature-learnmore-right-frame">
+                    @Display(Model.FeatureLearnMoreRightFrame)
+                </div>
+            }
+        
+            @if (Model.LearnMore != null)
+            {
+                @Display(Model.LearnMore)
+            }
+            
+
         </div>
+
+        @if (Model.FeatureLearnMoreBannerFrameBottom != null)
+        {
+            <div class="feature-learnmore-banner-frame-bottom">
+                @Display(Model.FeatureLearnMoreBannerFrameBottom)
+            </div>
+        }
 
         
         @Display(Model.Content)
+
+
     
     </article>
 
-    @if(Model.Footer != null) {
+    @if (Model.Footer != null) {
         <footer>
             @Display(Model.Footer)
         </footer>
