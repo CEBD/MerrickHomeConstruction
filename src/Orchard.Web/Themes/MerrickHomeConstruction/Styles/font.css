@@ -12,24 +12,6 @@ EHMERGHERD FERNT FERCE!
     font-style: normal;
 }
 
-/*Jesse's Fonts*/
-@font-face
-{
-    font-family: 'SimiansBlogStandard';
-    src: url('fonts/SimiansBlogStandard16779/SimiansBlogStandard.eot');
-    src: url('fonts/SimiansBlogStandard16779/SimiansBlogStandard.eot?#iefix') format('embedded-opentype'), url('fonts/SimiansBlogStandard16779/SimiansBlogStandard.woff') format('woff'), url('fonts/SimiansBlogStandard16779/SimiansBlogStandard.ttf') format('truetype'), url('fonts/SimiansBlogStandard16779/SimiansBlogStandard.svg#SimiansBlogStandard') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face
-{
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'ui-icon';
-    src: url('fonts/UIIcons/ui-icon.eot');
-    src: local('â˜º'), url('fonts/UIIcons/ui-icon.eot?#iefix') format('embedded-opentype'), url('fonts/UIIcons/ui-icon.woff') format('woff'), url('fonts/UIIcons/ui-icon.svg#ui-icon') format('svg'), url('fonts/UIIcons/ui-icon.ttf') format('truetype');
-}
 
 
 
@@ -61,6 +43,32 @@ Pixels     EMs         Percent Points
 24px     1.846em     184.6%     18pt
 */
 
+/*@media screen and (min-width:620px) and (max-width:950px)
+{
+   #site-title h1 h2
+    {
+        font-size:1.2em;
+    }
+
+}
+
+@media screen and (max-width:620px) and (min-wdth:521px)
+{
+    #site-title h1 h2
+    {
+        font-size:1.3em;
+    }
+}
+
+@media screen and (max-width:520px) and (min-width:355px)
+{
+    #site-title h1 h2
+    {
+        font-size:0.9em;
+    }
+}*/
+
+
 
 body
 {
@@ -82,7 +90,7 @@ h1, h2, h3, h4, h5, h6
 #site-title
 {
     text-align: center;
-    font-size: 6em;
+    font-size: 5em;
     letter-spacing: 2pt;
     word-spacing: 1.3pt;
     font-family: BebasNeue;
@@ -90,7 +98,13 @@ h1, h2, h3, h4, h5, h6
 
 h1 a:hover
 {
-   color: rgba(255,149,0,0.9);
+   /*color: rgba(255,149,0,0.9); sweet orange color*/
+      color: rgba(0, 0, 255, 0.8); /*standard blue for waffles cms*/
+}
+
+h2 > a:hover
+{
+    color: rgba(255,149,0,0.9); 
 }
 
 
@@ -208,10 +222,10 @@ a
     transition: all 200ms ease-in-out;
 }
 
-    a:hover
+    a:hover 
     {
         text-decoration: none;
-        color: rgba(0, 0, 255, 0.8);
+        color: rgba(0, 0, 255, 0.8); /*#0000FF*/
     }
 
 

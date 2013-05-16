@@ -75,12 +75,12 @@
     <Content Include="BlankNoggin\Styles\waffles.css" />
     <Content Include="BlankNoggin\Theme.png" />
     <Content Include="BlankNoggin\Theme.txt" />
-    <Content Include="MerrickHomeConstruction\Scripts\BannerDoodle\cellular-automata\cellular-automata.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\ImageSlider\easySlider1.7.js" />
     <Content Include="MerrickHomeConstruction\Scripts\jquery-1.8.2.min.js" />
     <Content Include="MerrickHomeConstruction\Scripts\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="MerrickHomeConstruction\Scripts\parts\imageslider.js" />
     <Content Include="MerrickHomeConstruction\Scripts\parts\search.js" />
     <Content Include="MerrickHomeConstruction\Scripts\parts\sitetitle.js" />
-    <Content Include="MerrickHomeConstruction\Scripts\simiansblog.js" />
     <Content Include="MerrickHomeConstruction\Styles\debug.css" />
     <Content Include="MerrickHomeConstruction\Styles\font.css" />
     <Content Include="MerrickHomeConstruction\Styles\fonts\BebasNeue\BebasNeue-webfont.svg" />
@@ -119,6 +119,8 @@
     <Content Include="MerrickHomeConstruction\Styles\parts\search.css" />
     <Content Include="MerrickHomeConstruction\Styles\parts\sitetitle.css" />
     <Content Include="MerrickHomeConstruction\Styles\reset.css" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\left.gif" />
+    <Content Include="MerrickHomeConstruction\Styles\simian\images\right.gif" />
     <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="MerrickHomeConstruction\Styles\simian\images\ui-bg_glass_55_fbf9ee_1x400.png" />

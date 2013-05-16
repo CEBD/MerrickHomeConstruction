@@ -1,0 +1,50 @@
+﻿@using So.FeatureListSlider.Models;
+@{
+    Script.Require("jQuery");
+    Style.Include("FeatureListSlider.css");
+    Script.Include("jquery.featureList-1.0.0.js");
+
+    bool isFirstItem = true;
+}
+@if (Model.FeaturedItems.Count > 0)
+{
+    <div id="slideNav">
+    </div>    
+    <div id="feature_list">
+        <ul id="tabs">
+            @foreach (FeatureListSliderItemsViewModel featuredItem in Model.FeaturedItems)
+            {                
+                <li><a href="javascript:;">
+                    @Html.Image(featuredItem.IconPath, "", null)
+                    <h3>@featuredItem.Headline</h3>
+                    <span>@featuredItem.SubHeadline</span> </a></li>
+            }
+        </ul>
+        <ul id="output">
+            @foreach (FeatureListSliderItemsViewModel featuredItem in Model.FeaturedItems)
+            {                
+                <li>
+                    @Html.Image(featuredItem.ImagePath, "", null)
+                    <a href="@featuredItem.LinkUrl">@("read more")</a> </li>
+            }
+        </ul>
+    </div>                       
+
+            using (Script.Foot())
+            {
+                if (Model.FeaturedItems.Count > 1)
+                {
+                    //string pagerElement = Model.Group.ShowPager ? "'#slideNav'" : "null";            
+    <script type="text/javascript">
+                    //<![CDATA[
+                        $(function () {
+                            @* $("article.widget-featured-item-slider-widget").css({ 'width': '@(Model.Group.GroupWidth)px' }).css({ 'height': '@(Model.Group.GroupHeight)px' });*@
+                         
+                            
+                            $.featureList($("#tabs li a"),$("#output li"), {start_item	:	1});                          
+                        });
+                    //]]>
+    </script>
+                }
+            }
+}

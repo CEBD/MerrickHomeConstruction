@@ -14,4 +14,15 @@
     <Place Parts_Common_Metadata="-"/>
   </Match>
 -->
+
+  <!-- Remove metadata part from all pages and from blogs -->
+  <Match ContentType="Page">
+    <Place Parts_Common_Metadata="-"/>
+
+  </Match>
+  <Match ContentType="Blog">
+    <Place Parts_Common_Metadata="-"/>
+
+  </Match>
+
 </Placement>

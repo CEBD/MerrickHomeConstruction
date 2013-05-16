@@ -1,0 +1,9 @@
+Name: So.FeatureListSlider
+AntiForgery: enabled
+Author: Kees Schouten
+Website: http://schouten-online.nl (not available yet)
+Version: 1.0
+OrchardVersion: 1.3
+Description: A feature list slider alternative for the FeaturedItemSlider module. Compatible with v1.4.2 of FeaturedItemSlider module and maybe higher
+Dependencies: FeaturedItemSlider
+Category: Widget
