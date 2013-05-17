@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    console.log('loaded')
+   
 
     // 100MckenzieDriveWeatherfordOk73096&sensor=false
 

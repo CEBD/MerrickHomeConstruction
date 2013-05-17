@@ -68,11 +68,17 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Styles\galleria\classic-loader.gif" />
+    <Content Include="Styles\galleria\classic-map.png" />
+    <Content Include="Scripts\galleria-1.2.9.min.js" />
+    <Content Include="Scripts\galleria.classic.js" />
+    <Content Include="Scripts\galleria.classic.min.js" />
     <Content Include="Scripts\PropertyAddressPartEdit.js" />
     <Content Include="Scripts\PropertyImageGallery.js" />
+    <Content Include="Styles\galleria.classic.css" />
     <Content Include="Styles\PropertyAddressPartEdit.css" />
     <Content Include="Styles\PropertyImageGallery.css" />
-    <Content Include="Styles\waffles.css" />
+    <Content Include="Styles\Waffles.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\Web.config" />
@@ -125,6 +131,11 @@
   <ItemGroup>
     <Content Include="Views\Fields\ImageMultiPicker-PropertyImageGallery.cshtml">
       <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\galleria.classic.min.js.map">
+      <DependentUpon>galleria.classic.js</DependentUpon>
     </Content>
   </ItemGroup>
   <PropertyGroup>
