@@ -1,0 +1,48 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+
+    Style.Require("Waffles");
+    Style.Include("Property.css");
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+}
+<article class="waffles content-item @contentTypeClassName">
+    <header class="w-12 w-alpha w-omega">
+        @Display(Model.Header)
+
+        @if (Model.Meta != null) {
+        <div class="metadata">
+            @Display(Model.Meta)
+        </div>
+        }
+
+    </header>
+    
+    
+    
+    <article class="w-12 w-alpha w-omega">
+        
+        <div class="w-12 w-alpha w-omega property-imageheadercarousel" >
+            
+            @Display(Model.PropertyImageHeaderCarousel)
+
+        </div>
+        
+
+        @Display(Model.Content)
+
+    </article>
+
+   
+    
+    
+
+    @if(Model.Footer != null) {
+    <footer class="w-12 w-alpha w-omega">
+        @Display(Model.Footer)
+    </footer>
+    }
+</article>

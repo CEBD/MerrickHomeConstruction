@@ -4,19 +4,21 @@
     <Place Parts_PropertyAddress = "Content:5"/>
     <Place Parts_PropertyAddress_Edit="Content:10"/>
 
-  <Match ContentType="Property" >
+    <Match ContentType="Property" >
+        <Place Parts_Common_Metadata="-"></Place>
+        
+        <Match DisplayType="Detail">
+            
+            <Place Parts_Title ="PropertyImageHeaderCarousel:0"></Place>
+            <Place Fields_ImageMultipicker ="PropertyImageHeaderCarousel:1"></Place>
+            
+            
+        </Match>
+        
+        <Match DisplayType="Summary">
+            <Place Parts_Title =""></Place>
 
-    <Place Parts_Common_Metadata="-"></Place>
-    
-    <Match DisplayType="Detail">
-
-      <Place Parts_Title ="Header:0"></Place>
-
+        </Match>
     </Match>
-    <Match DisplayType="Summary">
-      <Place Parts_Title ="-"></Place>
 
-    </Match>
-  </Match>
-    
 </Placement>

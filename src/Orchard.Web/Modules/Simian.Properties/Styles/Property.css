@@ -1,0 +1,24 @@
+﻿.property-imageheadercarousel {
+    
+
+
+}
+
+
+.property-title-frame {
+    position: relative;
+    height: 0px;
+    overflow: visible;
+    margin: 0px 5px;
+    z-index: 100;
+    display: block;
+    width: 50%;
+}
+
+.property-title-text {
+    background-color: rgba(0,0,0, 0.3);
+    color: white;
+    height: 30px;
+    font-size: 30px;
+    padding: 5px;
+}
