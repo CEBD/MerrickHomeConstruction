@@ -2,12 +2,9 @@ using Orchard.ContentManagement.MetaData;
 using Orchard.Core.Contents.Extensions;
 using Orchard.Data.Migration;
 
-namespace Simian.Properties
-{
-    public class Migrations : DataMigrationImpl
-    {
-        public int Create()
-        {
+namespace Simian.Properties {
+    public class Migrations : DataMigrationImpl {
+        public int Create() {
             SchemaBuilder.CreateTable("PropertyAddressPartRecord", table =>
                                                                    table.ContentPartRecord()
                                                                         .Column<double>("Latitude")
@@ -22,9 +19,10 @@ namespace Simian.Properties
                                                                          part.Attachable()
                                                                              .WithField("PropertyImageGallery", f =>
                                                                                                                 f.OfType("ImageMultiPickerField")
-                                                                                                                .WithDisplayName("Galleria Image Gallery")
-                                                                                                                .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'},{name: 'description', displayName: 'Description', type:'textarea'}]")
+                                                                                                                 .WithDisplayName("Property Image Gallery")
+                                                                                                                 .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'},{name: 'description', displayName: 'Description', type:'textarea'}]")
                                                                              ));
+                                                                             
 
 
             ContentDefinitionManager.AlterPartDefinition("PropertyPart", part =>
@@ -67,14 +65,29 @@ namespace Simian.Properties
                                                                              .WithField("Bathrooms", f => f.OfType("TextField")
                                                                                                            .WithDisplayName("Bathrooms")
                                                                              )
-                                                                             .WithField("MaximumOccupancy", f => f.OfType("NumericField")
-                                                                                                                  .WithDisplayName("MaximumOccupancy")
+                                                                             .WithField("HouseSqFeet", f => f.OfType("TextField")
+                                                                                                             .WithDisplayName("Sq. Feet")
                                                                              )
-                                                                             .WithField("FloorplanImage", f => f.OfType("MediaPickerField").WithDisplayName("Floor Plan")
+                                                                             .WithField("LotSize", f => f.OfType("TextField")
+                                                                                                         .WithDisplayName("Lot Size")
+                                                                             )
+                                                                             .WithField("YearBuilt", f => f.OfType("TextField")
+                                                                                                           .WithDisplayName("Year Built")
+                                                                             )
+                                                                             .WithField("MaximumOccupancy", f => f.OfType("NumericField")
+                                                                                                                  .WithDisplayName("Max Occupancy")
                                                                              )
                                                                              .WithField("Price", f => f.OfType("TextField")
-                                                                                                           .WithDisplayName("Price")
+                                                                                                       .WithDisplayName("Price")
                                                                              )
+                                                                             .WithField("Subtitle", f => f.OfType("TextField") //kind of confusing naming.... propoerty type name or edition name
+                                                                                                          .WithDisplayName("Subtitle")
+                                                                             )
+                                                                             .WithField("FloorPlanImageGallery", f =>
+                                                                                                               f.OfType("ImageMultiPickerField")
+                                                                                                                .WithDisplayName("Property Floor Plan Image Gallery")
+                                                                                                                .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'}]")
+                                                                            )
                 );
 
             ContentDefinitionManager.AlterTypeDefinition("Property", builder =>
@@ -100,11 +113,10 @@ namespace Simian.Properties
 
             ContentDefinitionManager.AlterTypeDefinition("GalleriaImageGalleryWidget",
                                                          b => b
-
-                                                             .WithPart("GalleriaPart")
-                                                             .WithPart("WidgetPart")
-                                                             .WithPart("CommonPart")
-                                                             .WithSetting("Stereotype", "Widget")
+                                                                  .WithPart("GalleriaPart")
+                                                                  .WithPart("WidgetPart")
+                                                                  .WithPart("CommonPart")
+                                                                  .WithSetting("Stereotype", "Widget")
                 );
 
 

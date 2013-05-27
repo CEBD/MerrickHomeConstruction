@@ -7,18 +7,41 @@
     <Match ContentType="Property" >
         <Place Parts_Common_Metadata="-"></Place>
         
+        
+        
         <Match DisplayType="Detail">
+            
             
             <Place Parts_Title ="PropertyImageHeaderCarousel:0"></Place>
             <Place Fields_ImageMultipicker ="PropertyImageHeaderCarousel:1"></Place>
-            
-            
+
+
+            <Place Parts_PropertyAddress="PropertyAddress:0" />
+
+            <Place 
+                   Parts_Common_Body="PropertyDescription:1"/>
+
+            <Place Fields_ImageMultipicker-FloorPlanImageGallery="PropertyFloorplans:0"
+                   
+                   Fields_Contrib_TaxonomyField-Ammenities="PropertyAmmenities:1"
+                   
+                   />
+
+            <Place
+                Fields_Boolean-Available="PropertyMainInfo"
+
+                
+                Fields_Common_Text-Subtitle="PropertyMainInfo:1"
+                
+                Fields_Common_Text-Price="PropertyMainInfo:2" />
         </Match>
         
         <Match DisplayType="Summary">
             <Place Parts_Title =""></Place>
-
         </Match>
+        
+        
     </Match>
 
 </Placement>
+

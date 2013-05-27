@@ -1,0 +1,36 @@
+﻿@using Amba.ImagePowerTools.Fields
+@using Amba.ImagePowerTools.HtmlHelpers
+@using System.Linq
+@using Amba.ImagePowerTools.Models
+@using Amba.ImagePowerTools.Settings
+@{
+    var field = (ImageMultiPickerField) Model.Field;
+    var settings = (ImageMultiPickerFieldSettings) Model.Settings;
+    Style.Require("Waffles");
+    Style.Require("Galleria.Simian");
+
+    Script.Require("jQuery");
+    Script.Require("Galleria");
+    Script.Require("Galleria.Simian");
+
+    Style.Include("FloorPlanImageGallery");
+    Script.Include("FloorPlanImageGallery");
+}
+
+@if (field.Images.Any()) {
+    <div class="waffles floorplan-imagegallery">
+        <div class="floorplan-imagegallery-slidingframe">
+            @foreach (SelectedImage image in field.Images) {
+                <div class="floorplan-imagegallery-image-frame">
+                    @{
+                        string title = image["title"];
+                        string imageUrl = "~/" + image.FilePath;
+                    }
+                    <a href= @Href(imageUrl)>
+                        @Html.ResizedImage(image.FilePath, htmlAttributes: new {alt = "", @class = "floorplan-imagegallery-image-image", data_title = @title})
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+}

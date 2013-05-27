@@ -4,6 +4,102 @@
 
 }
 
+.property-content {
+   
+}
+
+.property-ammenities {
+
+ 
+}
+
+.property-description {
+    
+   
+}
+
+.text-field-available {
+
+    float: right;
+    display: block;
+}
+
+.text-field-available{
+    font-size: 36px;
+
+    position: relative;
+    top: 15px;
+    opacity: 0.5;
+    
+    right: 15px;
+    border: 1px dotted red;
+    border-radius: 10px;
+
+}
+
+.text-field-available-no {
+    color: red;
+    padding: 12px 12px;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+}
+.property-maininfozone p{
+    margin: 0px;
+}
+
+.property-price {
+    font-size: 48px;
+    color: #444;
+    margin: 3px 0px;
+    padding: 0px;
+    line-height: 48px;
+}
+.property-subtitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.property-details {
+    border: 1px #444 solid;
+    border-radius: 5px;
+}
+
+.property-details legend {
+    padding: 5px;
+}
+
+.property-details fieldset {
+    margin-top:0px
+}
+
+.property-details p {
+    margin-bottom: 2px;
+}
+.property-details ul {
+    list-style: none;
+    padding: 3px;
+    margin: 0px 0px 0px 3px;
+}
+
+.property-details .name {
+    color: #444;
+}
+
+.property-details .value {
+    color: #111;
+    font-weight: 600;
+}
+
+
+.media-picker-field-floor-plan {
+    width: 100%;
+    float: left;
+}
+.property-description  img {
+    width:100%
+}
 
 .property-title-frame {
     position: relative;
@@ -21,4 +117,14 @@
     height: 30px;
     font-size: 30px;
     padding: 5px;
+}
+
+.property-address-view {
+    text-align: right;
+}
+
+.property-ammenity {
+    width: 50%;
+    float: left;
+    display: block;
 }

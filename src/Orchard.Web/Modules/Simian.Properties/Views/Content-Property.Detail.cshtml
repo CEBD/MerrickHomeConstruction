@@ -3,46 +3,71 @@
 
     Style.Require("Waffles");
     Style.Include("Property.css");
-    if (Model.Title != null) {
+    if (Model.Title != null)
+    {
         Layout.Title = Model.Title;
     }
-    
+
     var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
 }
 <article class="waffles content-item @contentTypeClassName">
     <header class="w-12 w-alpha w-omega">
         @Display(Model.Header)
 
-        @if (Model.Meta != null) {
-        <div class="metadata">
-            @Display(Model.Meta)
-        </div>
+        @if (Model.Meta != null)
+        {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
         }
-
     </header>
-    
-    
-    
+
     <article class="w-12 w-alpha w-omega">
-        
-        <div class="w-12 w-alpha w-omega property-imageheadercarousel" >
-            
+
+        <div class="w-12 w-alpha w-omega property-imageheadercarousel">
             @Display(Model.PropertyImageHeaderCarousel)
+        </div>
+        <div class="w-12 w-alpha w-omega property-content">
+
+            <div class="w-8 w-alpha">
+                <div class="w-12 w-alpha w-omega property-maininfozone">
+                    @Display(Model.PropertyMainInfo)
+                </div>
+                <div class="w-12 w-alpha w-omega">
+                    <fieldset class="property-details">
+                        <legend>Info</legend>
+                        <div class="w-12">
+                            <div class="w-4 w-alpha">
+                                <h2>Details</h2>
+                                @Display(Model.Content)
+                            </div>
+                            <div class="w-8 w-omega property-ammenities">
+                                <h2>Ammenities</h2>
+                                @Display(Model.PropertyAmmenities)
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="w-4 w-omega">
+                @Display(Model.PropertyAddress)
+            </div>
 
         </div>
-        
 
-        @Display(Model.Content)
+        <div class="w-4 w-alpha">
+            @Display(Model.PropertyFloorplans)
+        </div>
+        <div class="w-8 w-omega  property-description">
+            @Display(Model.PropertyDescription)
+        </div>
 
     </article>
 
-   
-    
-    
-
-    @if(Model.Footer != null) {
-    <footer class="w-12 w-alpha w-omega">
-        @Display(Model.Footer)
-    </footer>
+    @if (Model.Footer != null)
+    {
+        <footer class="w-12 w-alpha w-omega">
+            @Display(Model.Footer)
+        </footer>
     }
 </article>

@@ -5,16 +5,22 @@
 @{
     var field = (ImageMultiPickerField)Model.Field;
     var settings = (ImageMultiPickerFieldSettings)Model.Settings;
-    Script.Require("jQuery");
     Style.Require("Waffles");
-    Style.Include("galleria.simian.css");
+    Style.Require("Galleria.Simian");
+    
+    Script.Require("jQuery");
+    Script.Require("Galleria");
+    Script.Require("Galleria.Simian");
+    
+    
+    
+    
     Style.Include("PropertyImageGallery");
     
-    Script.Include("galleria");
-    Script.Include("galleria.simian.js");
+    
+    
     Script.Include("PropertyImageGallery");
 }
-
 @if (field.Images.Any())
 {
     <div class="waffles property-imagegallery">
@@ -31,7 +37,6 @@
                         @Html.ResizedImage(image.FilePath, htmlAttributes: new { alt = "", @class = "property-imagegallery-image-image", data_title = @title, data_description = @description })
                     </a>
                 </div>
-        
             }
         </div>
     </div>

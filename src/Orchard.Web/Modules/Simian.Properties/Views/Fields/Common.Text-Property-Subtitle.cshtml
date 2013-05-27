@@ -1,0 +1,10 @@
+﻿@using Orchard.Utility.Extensions;
+
+@if (HasText(Model.Value))
+{
+    <p class="text-field">
+        <span class="value property-subtitle">
+            @(new MvcHtmlString(Html.Encode((HtmlString)Model.Value).ReplaceNewLinesWith("<br />$1")))
+        </span>
+    </p>
+}

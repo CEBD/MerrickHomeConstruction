@@ -7,7 +7,10 @@ namespace Simian.Properties {
             var manifest = builder.Add();
 
             manifest.DefineStyle("Waffles").SetUrl("Waffles.css");
+            manifest.DefineStyle("Galleria.Simian").SetUrl("galleria.simian.css");
 
+            manifest.DefineScript("Galleria").SetUrl("galleria.js");
+            manifest.DefineScript("Galleria.Simian").SetUrl("galleria.simian.js");
         }
     }
 }

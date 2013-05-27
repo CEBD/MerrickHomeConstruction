@@ -1,50 +1,27 @@
 ﻿@{
     Script.Require("jQuery");
     Style.Require("Waffles");
+
     Script.Include("gmaps");
-    Style.Include("PropertyAddressPartEdit");
+    Script.Include("PropertyAddressPartView");
+    Style.Include("PropertyAddressPart");
+    
 }
-
-
 <script>
-    $(document).ready(function() {
-        
-        var myLatlng = new google.maps.LatLng(@Model.PropertyAddressPart.Latitude, @Model.PropertyAddressPart.Longitude);
-
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-
-        
-        var myOptions = {
-            center: myLatlng,
-            zoom: 18,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        var gMap = new google.maps.Map($('.googlemap')[0], myOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: gMap,
-            icon: iconBase + 'schools_maps.png',
-            shadow: iconBase + 'schools_maps.shadow.png',
-            title: '@Model.PropertyAddressPart.Street'
-        });
-    });
+    var propertyaddress_myLat = @Model.PropertyAddressPart.Latitude;
+    var propertyaddress_myLong = @Model.PropertyAddressPart.Longitude;
+    var propertyaddress_title = '@Model.PropertyAddressPart.Street';
 </script>
 
 <div class="waffles">
-
     <div class="w-12">
-        <div class="w-4 w-alpha">
+        <div class="w-12 w-alpha w-omega property-address-view">
             <span class="w-12 w-alpha w-omega w-v-1 property-address-view-street">@Model.PropertyAddressPart.Street</span>
             <span class="w-12 w-alpha w-omega w-v-1 property-address-view-state">@Model.PropertyAddressPart.City , @Model.PropertyAddressPart.State</span>
             <span class="w-12 w-alpha w-omega w-v-1 property-address-view-zip">@Model.PropertyAddressPart.Zipcode</span>
         </div>
-        <div class="w-8 w-omega">
-
-            <div class="googlemap googlemap-view w-12 w-alpha w-omega">
-                &nbsp;
-            </div>
-
+        <div class="googlemap googlemap-view w-12 w-alpha w-omega">
+            &nbsp;
         </div>
     </div>
 </div>

@@ -68,6 +68,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\galleria.js" />
+    <Content Include="Scripts\galleria.simian.js" />
+    <Content Include="Scripts\gmaps.js" />
+    <Content Include="Scripts\PropertyAddressPartView.js" />
+    <Content Include="Styles\FloorPlanImageGallery.css" />
+    <Content Include="Styles\galleria.simian.css" />
     <Content Include="Styles\galleria\classic-loader.gif" />
     <Content Include="Styles\galleria\classic-map.png" />
     <Content Include="Scripts\galleria-1.2.9.min.js" />
@@ -76,7 +82,8 @@
     <Content Include="Scripts\PropertyAddressPartEdit.js" />
     <Content Include="Scripts\PropertyImageGallery.js" />
     <Content Include="Styles\galleria.classic.css" />
-    <Content Include="Styles\PropertyAddressPartEdit.css" />
+    <Content Include="Styles\Property.css" />
+    <Content Include="Styles\PropertyAddressPart.css" />
     <Content Include="Styles\PropertyImageGallery.css" />
     <Content Include="Styles\Waffles.css" />
     <Content Include="Web.config" />
@@ -120,7 +127,9 @@
     <Content Include="Views\EditorTemplates\Parts\PropertyAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="placement.info" />
+    <Content Include="placement.info">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\PropertyAddress.cshtml" />
@@ -140,6 +149,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Content-Property.Detail.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts.Title-Property.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\Contrib.TaxonomyField-Ammenities.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\Common.Text-Property-Price.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\Boolean-PropertyPart-Available.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\Common.Text-Property-Subtitle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\ImageMultiPicker-FloorPlanImageGallery.cshtml">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

@@ -56,3 +56,23 @@
     height: 50px;
     line-height: 24px;
 }
+
+.property-imagegallery .galleria-container .galleria-info {
+    
+    top: 217px !important;
+    left:96% !important;
+}
+
+.property-imagegallery .galleria-info-text {
+    margin-top: -9%;
+    margin-left: -300px;
+    text-align: right;
+    width: 300px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.property-imagegallery .galleria-info-close {
+    position: relative;
+    top: -54px;
+    right: 292px;
+}
