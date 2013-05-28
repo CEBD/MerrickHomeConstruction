@@ -11,6 +11,11 @@ namespace Simian.Properties {
 
             manifest.DefineScript("Galleria").SetUrl("galleria.js");
             manifest.DefineScript("Galleria.Simian").SetUrl("galleria.simian.js");
+
+            manifest.DefineScript("Knockout").SetUrl("knockout-2.0.js");
+            manifest.DefineScript("JsRender").SetUrl("jsrender.js");
+
+
         }
     }
 }

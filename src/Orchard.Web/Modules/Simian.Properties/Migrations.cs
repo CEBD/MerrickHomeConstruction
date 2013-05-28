@@ -5,13 +5,6 @@ using Orchard.Data.Migration;
 namespace Simian.Properties {
     public class Migrations : DataMigrationImpl {
         public int Create() {
-            ContentDefinitionManager.AlterPartDefinition("GalleriaPart", part =>
-                                                                         part.Attachable()
-                                                                             .WithField("PropertyImageGallery", f =>
-                                                                                                                f.OfType("ImageMultiPickerField")
-                                                                                                                 .WithDisplayName("Property Image Gallery")
-                                                                                                                 .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'},{name: 'description', displayName: 'Description', type:'textarea'}]")
-                                                                             ));
 
             ContentDefinitionManager.AlterPartDefinition("PropertyPart", part =>
                                                                          part
@@ -99,13 +92,6 @@ namespace Simian.Properties {
                                                                          .Draftable()
                 );
 
-            ContentDefinitionManager.AlterTypeDefinition("GalleriaImageGalleryWidget",
-                                                         b => b
-                                                                  .WithPart("GalleriaPart")
-                                                                  .WithPart("WidgetPart")
-                                                                  .WithPart("CommonPart")
-                                                                  .WithSetting("Stereotype", "Widget")
-                );
             return 1;
         }
     }

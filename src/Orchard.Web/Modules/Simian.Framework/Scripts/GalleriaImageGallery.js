@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     
     
-    Galleria.run('.property-imagegallery');
+    Galleria.run('.galleria-imagegallery');
  
 });

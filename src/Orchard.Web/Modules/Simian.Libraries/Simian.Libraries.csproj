@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -69,6 +69,7 @@
     <Content Include="Scripts\galleria.classic.min.js" />
     <Content Include="Scripts\galleria.js" />
     <Content Include="Scripts\galleria.simian.js" />
+    <Content Include="Scripts\jsrender.js" />
     <Content Include="Styles\galleria.classic.css" />
     <Content Include="Styles\galleria.simian.css" />
     <Content Include="Styles\galleria\classic-loader.gif" />
@@ -103,6 +104,9 @@
     <Content Include="Scripts\galleria.classic.min.js.map">
       <DependentUpon>galleria.classic.js</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\knockout-2.0.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

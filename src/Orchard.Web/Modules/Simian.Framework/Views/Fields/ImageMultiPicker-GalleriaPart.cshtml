@@ -12,23 +12,23 @@
     Script.Require("Galleria");
     Script.Require("Galleria.Simian");
 
-    Style.Include("PropertyImageGallery");
-    Script.Include("PropertyImageGallery");
+    Style.Require("GalleriaImageGallery");
+    Script.Require("GalleriaImageGallery");
 }
 @if (field.Images.Any())
 {
-    <div class="waffles property-imagegallery">
-        <div class="property-imagegallery-slidingframe">
+    <div class="waffles galleria-imagegallery">
+        <div class="galleria-imagegallery-slidingframe">
             @foreach (var image in field.Images)
             {   
-                <div class="property-imagegallery-image-frame">
+                <div class="galleria-imagegallery-image-frame">
                     @{
                         var title = image["title"];
                         var description = image["description"];
                         var imageUrl = "~/"+image.FilePath;
                     }
                     <a href= @Href(imageUrl)>
-                        @Html.ResizedImage(image.FilePath, htmlAttributes: new { alt = "", @class = "property-imagegallery-image-image", data_title = @title, data_description = @description })
+                        @Html.ResizedImage(image.FilePath, htmlAttributes: new { alt = "", @class = "galleria-imagegallery-image-image", data_title = @title, data_description = @description })
                     </a>
                 </div>
             }

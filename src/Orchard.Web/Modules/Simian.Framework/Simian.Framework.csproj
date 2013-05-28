@@ -67,7 +67,9 @@
     <Content Include="Scripts\gmaps.js" />
     <Content Include="Scripts\AddressPartEdit.js" />
     <Content Include="Scripts\AddressPartView.js" />
+    <Content Include="Scripts\GalleriaImageGallery.js" />
     <Content Include="Styles\AddressPart.css" />
+    <Content Include="Styles\GalleriaImageGallery.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\Web.config" />
@@ -84,6 +86,10 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Amba.ImagePowerTools\Amba.ImagePowerTools.csproj">
+      <Project>{c0b9c2b5-1620-4315-9e87-a2c2c5afd3ca}</Project>
+      <Name>Amba.ImagePowerTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\AddressPartDriver.cs" />
@@ -91,6 +97,7 @@
     <Compile Include="Models\AddressPart.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\AddressPartRecord.cs" />
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -100,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\EditorTemplates\Parts\Address.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fields\ImageMultiPicker-GalleriaPart.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
