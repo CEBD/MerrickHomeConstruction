@@ -1,0 +1,11 @@
+﻿Name: Simian.Framework
+AntiForgery: enabled
+Author: Jesse Harlin [the_Simian]
+Website: http://jesseharlin.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: This is a Parent Module, whose entire purpose is to codify a framework of tools I commonly use. This is Waffles, my Css framework, jQuery, my version of jQuery ui, knockout. knockout mapping, js render and plugins.I am able to break these out if need be.
+Features:
+    Simian.Framework:
+        Description: This parent framework is meant to codify the plusins and tools themselves (but not entities) that I use commonly. My personal toolbox, the core of it.,
+		Dependencies: Simian.Libraries, Contrib.Taxonomies, Orchard.Fields, Amba.ImagePowerTools

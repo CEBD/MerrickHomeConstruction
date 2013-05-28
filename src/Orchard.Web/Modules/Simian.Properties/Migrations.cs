@@ -5,16 +5,6 @@ using Orchard.Data.Migration;
 namespace Simian.Properties {
     public class Migrations : DataMigrationImpl {
         public int Create() {
-            SchemaBuilder.CreateTable("PropertyAddressPartRecord", table =>
-                                                                   table.ContentPartRecord()
-                                                                        .Column<double>("Latitude")
-                                                                        .Column<double>("Longitude")
-                                                                        .Column<string>("City")
-                                                                        .Column<string>("State")
-                                                                        .Column<string>("Zipcode")
-                                                                        .Column<string>("Street")
-                );
-
             ContentDefinitionManager.AlterPartDefinition("GalleriaPart", part =>
                                                                          part.Attachable()
                                                                              .WithField("PropertyImageGallery", f =>
@@ -22,8 +12,6 @@ namespace Simian.Properties {
                                                                                                                  .WithDisplayName("Property Image Gallery")
                                                                                                                  .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'},{name: 'description', displayName: 'Description', type:'textarea'}]")
                                                                              ));
-                                                                             
-
 
             ContentDefinitionManager.AlterPartDefinition("PropertyPart", part =>
                                                                          part
@@ -80,23 +68,24 @@ namespace Simian.Properties {
                                                                              .WithField("Price", f => f.OfType("TextField")
                                                                                                        .WithDisplayName("Price")
                                                                              )
-                                                                             .WithField("Subtitle", f => f.OfType("TextField") //kind of confusing naming.... propoerty type name or edition name
+                                                                             .WithField("Subtitle", f => f.OfType("TextField")
                                                                                                           .WithDisplayName("Subtitle")
                                                                              )
                                                                              .WithField("FloorPlanImageGallery", f =>
-                                                                                                               f.OfType("ImageMultiPickerField")
-                                                                                                                .WithDisplayName("Property Floor Plan Image Gallery")
-                                                                                                                .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'}]")
-                                                                            )
+                                                                                                                 f.OfType("ImageMultiPickerField")
+                                                                                                                  .WithDisplayName("Property Floor Plan Image Gallery")
+                                                                                                                  .WithSetting("ImageMultiPickerFieldSettings.CustomFields", "[{name: 'title', displayName: 'Title', type:'text'}]")
+                                                                             )
                 );
 
             ContentDefinitionManager.AlterTypeDefinition("Property", builder =>
                                                                      builder
+                                                                         .WithPart("AddressPart")
                                                                          .WithPart("CommonPart")
                                                                          .WithPart("TitlePart")
                                                                          .WithPart("BodyPart")
+                                                                         
                                                                          .WithPart("PublishLaterPart")
-                                                                         .WithPart("PropertyAddressPart")
                                                                          .WithPart("GalleriaPart")
                                                                          .WithPart("PropertyPart")
                                                                          .WithPart("AutoroutePart", partBuilder =>
@@ -110,7 +99,6 @@ namespace Simian.Properties {
                                                                          .Draftable()
                 );
 
-
             ContentDefinitionManager.AlterTypeDefinition("GalleriaImageGalleryWidget",
                                                          b => b
                                                                   .WithPart("GalleriaPart")
@@ -118,8 +106,6 @@ namespace Simian.Properties {
                                                                   .WithPart("CommonPart")
                                                                   .WithSetting("Stereotype", "Widget")
                 );
-
-
             return 1;
         }
     }

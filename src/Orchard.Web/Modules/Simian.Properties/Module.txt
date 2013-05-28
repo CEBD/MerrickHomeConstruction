@@ -8,4 +8,4 @@ Description: Simple Module that can be utilized for real estate properties.
 Features:
     Simian.Properties:
         Description: Simple Module that can be utilized for real estate properties. MIT Liscence,
-		Dependencies: Orchard.Fields, Contrib.Taxonomies , Amba.ImagePowerTools, Orchard.jQuery
+		Dependencies: Simian.Framework

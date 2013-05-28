@@ -1,0 +1,11 @@
+﻿Name: Simian.Libraries
+AntiForgery: enabled
+Author: Jesse Harlin [the_Simian]
+Website: http://jesseharlin.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: My Libraries
+Features:
+    Simian.Libraries:
+        Description: All existing libraries, I frequently use,
+		Dependencies: Orchard.jQuery

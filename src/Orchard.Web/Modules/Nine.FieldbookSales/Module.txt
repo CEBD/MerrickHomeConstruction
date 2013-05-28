@@ -9,4 +9,4 @@ Features:
     Nine.FieldbookSales:
         Description: allow use of Feature ContentTypes 
         Category: 
-        Dependencies: Orchard.Fields, Contrib.Taxonomies
+        Dependencies: Simian.Framework

@@ -1,7 +1,7 @@
 ﻿using Orchard.ContentManagement.Records;
 
-namespace Simian.Properties.Models {
-    public class PropertyAddressPartRecord : ContentPartRecord {
+namespace Simian.Framework.Models {
+    public class AddressPartRecord : ContentPartRecord {
         public virtual double Latitude { get; set; }
         public virtual double Longitude { get; set; }
         public virtual string City { get; set; }

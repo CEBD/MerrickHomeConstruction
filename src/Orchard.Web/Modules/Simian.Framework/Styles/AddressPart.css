@@ -12,17 +12,17 @@
     height: 250px;
 }
 
-.property-address-view-street
+.address-view-street
 {
     font-size: 24px;
 }
 
-.property-address-view-state
+.address-view-state
 {
     font-size: 18px;
 }
 
-.property-address-view-zip
+.address-view-zip
 {
     font-size: 16px;
 }

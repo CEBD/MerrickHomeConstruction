@@ -1,0 +1,37 @@
+﻿
+
+@{
+    Script.Require("jQuery");
+    Style.Require("Waffles");
+    Style.Include("AddressPart"); 
+    
+    
+    Script.Include("gmaps");
+    Script.Include("AddressPartView");
+    
+}
+
+<script>
+    if (!simian) {
+        var simian = {};
+    }
+
+    simian.address = {
+        latitude: @Model.AddressPart.Latitude,
+        longitude: @Model.AddressPart.Longitude,
+        title: '@Model.AddressPart.Street'
+    };
+</script>
+
+<div class="waffles">
+    <div class="w-12">
+        <div class="w-12 w-alpha w-omega address-view">
+            <span class="w-12 w-alpha w-omega w-v-1 address-view-street">@Model.AddressPart.Street</span>
+            <span class="w-12 w-alpha w-omega w-v-1 address-view-state">@Model.AddressPart.City , @Model.AddressPart.State</span>
+            <span class="w-12 w-alpha w-omega w-v-1 address-view-zip">@Model.AddressPart.Zipcode</span>
+        </div>
+        <div class="googlemap googlemap-view w-12 w-alpha w-omega">
+            &nbsp;
+        </div>
+    </div>
+</div>

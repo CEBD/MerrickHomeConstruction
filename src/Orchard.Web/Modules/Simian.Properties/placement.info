@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Placement>
-    <Place Parts_PropertyAddress = "Content:5"/>
-    <Place Parts_PropertyAddress_Edit="Content:10"/>
+
 
     <Match ContentType="Property" >
         <Place Parts_Common_Metadata="-"></Place>
@@ -16,7 +15,7 @@
             <Place Fields_ImageMultipicker ="PropertyImageHeaderCarousel:1"></Place>
 
 
-            <Place Parts_PropertyAddress="PropertyAddress:0" />
+            <Place Parts_Address="PropertyAddress:0" />
 
             <Place 
                    Parts_Common_Body="PropertyDescription:1"/>

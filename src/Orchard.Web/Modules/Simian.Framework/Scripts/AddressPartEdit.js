@@ -1,36 +1,28 @@
 ﻿$(document).ready(function () {
-
-   
-
-    // 100MckenzieDriveWeatherfordOk73096&sensor=false
-
     var googurl = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
-
     var $checkGoogleButton = $('#check-google-button');
-    var $addressFields = $('.property-address-part-fields').find('input');
+    var $addressFields = $('.address-part-fieldset').find('input');
 
     $checkGoogleButton.click(function () {
-
-     
         var args = '';
-
         $addressFields.each(function (i, e) {
-
             args += $(this).val();
-
         });
+
+        //TODO: make this operate on keystroke, knockout style, viewmodel and all!
+        // TODO replace the iframe garbage with gmaps api
 
         if (args) {
             args += '&sensor=false';
-
             var url = (googurl + args).split(" ").join("");
-
             $.get(url, null, null, 'json').done(function (data) {
                 if (data && data.results[0] && data.status === "OK") {
                     var lat = data.results[0].geometry.location.lat;
                     var lng = data.results[0].geometry.location.lng;
-                    $('#PropertyAddress_Latitude').val(lat);
-                    $('#PropertyAddress_Longitude').val(lng);
+                    
+                    $('#Address_Latitude').val(lat);
+                    $('#Address_Longitude').val(lng);
+                    
                     var cleanaddress = (data.results[0].formatted_address).split(" ").join("+");
                     var ll = '&ll=' + lat + ',' + lng ;
                     var icon = 'http://maps.google.com/mapfiles/ms/micons/homegardenbusiness.png';
@@ -43,11 +35,5 @@
                 }
             });
         }
-
-
-
-
     });
-
-
 });

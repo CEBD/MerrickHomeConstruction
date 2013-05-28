@@ -1,14 +1,15 @@
-﻿@model Simian.Properties.Models.PropertyAddressPart
+﻿@model Simian.Framework.Models.AddressPart
+
 @{
-    Style.Include("PropertyAddressPart");
+    Style.Include("AddressPart");
     Style.Require("Waffles");
     Script.Require("jQuery");
-    Script.Include("PropertyAddressPartEdit");
+    Script.Include("AddressPartEdit");
 }
-<div class="waffles">
 
+<div class="waffles">
     <div class="w-12">
-        <fieldset class="w-4 w-alpha">
+        <fieldset class="w-4 w-alpha address-part-fieldset">
             <legend>@T("Details")</legend>
 
             @Html.LabelFor(m => m.Latitude, T("Latitude"))
@@ -17,7 +18,7 @@
             @Html.LabelFor(m => m.Longitude, T("Longitude"))
             @Html.EditorFor(m => m.Longitude)
 
-            <div class="property-address-part-fields">
+            <div class="address-part-fields">
                 
                 @Html.LabelFor(m => m.Street, T("Street"))
                 @Html.EditorFor(m => m.Street)
@@ -31,7 +32,6 @@
                 @Html.LabelFor(m => m.Zipcode, T("Zipcode"))
                 @Html.EditorFor(m => m.Zipcode)
 
-
             </div>
             <br/>
             <button id="check-google-button" type="button"> Generate Map </button>
@@ -43,3 +43,4 @@
         </div>
     </div>
 </div>
+
