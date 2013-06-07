@@ -89,6 +89,7 @@
     <Content Include="Recipes\core.recipe.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Recipes\independentcontractor.recipe.xml" />
     <Content Include="Scripts\setup.js" />
     <Content Include="Views\Setup\Index.cshtml" />
   </ItemGroup>

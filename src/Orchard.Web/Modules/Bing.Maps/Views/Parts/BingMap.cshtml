@@ -1,0 +1,17 @@
+﻿@{
+Script.Require("jQuery");
+Script.Include("http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2");
+var mapIndex = (Context.Items["Bing.Map.Index"] as int?) ?? 0;
+Context.Items["Bing.Map.Index"] = mapIndex + 1;
+}
+@using(Script.Foot()) {
+<script type="text/javascript">
+  $(function() {
+  var map = new VEMap("BingMap@(mapIndex)");
+  var latlong = new VELatLong(@Model.Latitude, @Model.Longitude);
+  map.LoadMap(latlong, @Model.Zoom ,"h" ,false);
+  map.AddShape(new VEShape(VEShapeType.Pushpin, latlong));
+  });
+</script>
+}
+<div id="BingMap@(mapIndex)" style="position:relative; width:@(Model.Width)px; height:@(Model.Height)px;"></div>

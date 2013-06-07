@@ -1,0 +1,62 @@
+﻿@model Bing.Maps.Models.BingMapPart
+
+<fieldset>
+  <legend>Bing Maps</legend>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Latitude)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.Latitude)
+    @Html.ValidationMessageFor(model => model.Latitude)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Longitude)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.Longitude)
+    @Html.ValidationMessageFor(model => model.Longitude)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Width)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.Width)
+    @Html.ValidationMessageFor(model => model.Width)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Height)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.Height)
+    @Html.ValidationMessageFor(model => model.Height)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Zoom)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.Zoom)
+    @Html.ValidationMessageFor(model => model.Zoom)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(model => model.Mode)
+  </div>
+  <div class="editor-field">
+    @Html.DropDownListFor(model => model.Mode,
+        new SelectList(new [] {
+            "Road",
+            "Shaded",
+            "Aerial",
+            "Hybrid",
+            "Birdseye",
+            "BirdseyeHybrid"
+        }, Model.Mode))
+    @Html.ValidationMessageFor(model => model.Mode)
+  </div>
+
+</fieldset>

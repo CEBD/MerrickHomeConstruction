@@ -5,6 +5,7 @@ namespace Simian.Properties {
         public void BuildManifests(ResourceManifestBuilder builder) {
 
             var manifest = builder.Add();
+            manifest.DefineScript("jQuery").SetUrl("jQuery-1.8.2.js");
             manifest.DefineStyle("GalleriaImageGallery").SetUrl("GalleriaImageGallery.css");
             manifest.DefineScript("GalleriaImageGallery").SetUrl("GalleriaImageGallery.js");
         }

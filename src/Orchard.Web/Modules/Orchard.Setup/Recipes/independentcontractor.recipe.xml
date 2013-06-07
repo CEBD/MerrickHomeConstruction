@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Independent Contractor Recipe</Name>
+    <Description>A recipe that is easily modified for generic independent contractors. It includes the Simian.Framework and Simian.Properties Module</Description>
+    <Author>Amanda Harlin</Author>
+    <WebSite>http://amandaharlin.com</WebSite>
+    <Tags></Tags>
+    <Version>1.0</Version>
+  </Recipe>
+
+  <Theme packageId="Orchard.Theme.Bootstrap" current="true" />
+
+    <Feature enable=" 
+                      Orchard.jQuery,
+                      Simian.Framework,
+                      Simian.Properties,
+                      Orchard.Tags,
+                      Orchard.Lists,
+                      TinyMce,
+                      Orchard.Media,
+                      Orchard.MediaPicker,
+                      Orchard.ContentPicker,
+                      Orchard.PublishLater,
+                      Orchard.Widgets,
+                      Orchard.Widgets.PageLayerHinting,
+                      Orchard.ContentTypes,
+                      Orchard.Scripting,
+                      Orchard.Scripting.Lightweight,
+                      PackagingServices,
+                      Orchard.Packaging,
+                      Gallery,Gallery.Updates, 
+                      Bootstrap,
+                      TheThemeMachine" />
+  <Metadata>
+    <Types>
+      <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+        <TagsPart />
+        <LocalizationPart />
+      </Page>
+      <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+        <CommentsPart />
+        <TagsPart />
+        <LocalizationPart />
+      </BlogPost>
+    </Types>
+    <Parts>
+      <BodyPart BodyPartSettings.FlavorDefault="html" />
+    </Parts>
+  </Metadata>
+
+  <Settings />
+
+  <Migration features="*" />
+
+  <Command>
+    layer create Default /LayerRule:"true"
+    layer create TheHomepage /LayerRule:"url '~/'"
+
+    page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"~/" /Title:"Merrick Home Construction LLC" /Path:"~/" /Homepage:true /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"construction" /Title:"Construction" /Path:"~/construction" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"construction/new-construction" /Title:"New Construction" /Path:"~/construction/new-construction" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"construction/home-remodeling" /Title:"Home Remodeling" /Path:"~/construction/home-remodeling" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"construction/frequently-asked-questions" /Title:"Frequently Asked Questions" /Path:"~/construction/frequently-asked-questions" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"gallery" /Title:"Gallery" /Path:"~/gallery" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"testimonials" /Title:"Testimonials" /Path:"~/testimonials" /Homepage:false /Publish:true /UseWelcomeText:true
+
+    page create /Slug:"contact" /Title:"Contact Us" /Path:"~/contact" /Homepage:false /Publish:true /UseWelcomeText:true
+
+
+    widget create MenuWidget /Title:"Navigation" /Zone:"Navigation" /Position:"1" /Layer:"Default"
+
+
+    widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+    widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+    widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+
+
+    menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"2" /MenuText:"Construction" /Url:"~/construction" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"2.1" /MenuText:"New Construction" /Url:"~/construction/new-construction" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"2.2" /MenuText:"Home Remodeling" /Url:"~/construction/home-remodeling" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"2.3" /MenuText:"Frequently Asked Questions" /Url:"~/construction/frequently-asked-questions" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"3" /MenuText:"Gallery" /Url:"~/gallery" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"4" /MenuText:"Testimonials" /Url:"~/testimonials" /OnMainMenu:true
+
+    menuitem create /MenuPosition:"5" /MenuText:"Contact" /Url:"~/contact" /OnMainMenu:true
+
+  </Command>
+</Orchard>
