@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dark\Filters\LayoutFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,49 +109,6 @@
     <Content Include="Bootstrap\Styles\site.css" />
     <Content Include="Bootstrap\Theme.png" />
     <Content Include="Bootstrap\Theme.txt" />
-    <Content Include="Dark\Content\Images\arrow-submenu.png" />
-    <Content Include="Dark\Content\Images\breadcrumb.bg.png" />
-    <Content Include="Dark\Content\Images\breadcrumb.home.png" />
-    <Content Include="Dark\Content\Images\breadcrumb.sep.png" />
-    <Content Include="Dark\Content\Images\dummy.gif" />
-    <Content Include="Dark\Content\Images\flags\en-US.gif" />
-    <Content Include="Dark\Content\Images\flags\pt-PT.gif" />
-    <Content Include="Dark\Content\Images\footer.bg.png" />
-    <Content Include="Dark\Content\Images\footer.L.png" />
-    <Content Include="Dark\Content\Images\footer.M.png" />
-    <Content Include="Dark\Content\Images\footer.R.png" />
-    <Content Include="Dark\Content\Images\header.shadow.png" />
-    <Content Include="Dark\Content\Images\inputbtn.png" />
-    <Content Include="Dark\Content\Images\logo.png" />
-    <Content Include="Dark\Content\Images\menu.arrow.png" />
-    <Content Include="Dark\Content\Images\menu.bg.png" />
-    <Content Include="Dark\Content\Images\menuV.TL.png" />
-    <Content Include="Dark\Content\Images\menuV.TR.png" />
-    <Content Include="Dark\Content\Images\menuVitem.png" />
-    <Content Include="Dark\Content\Images\page.bg.dots.png" />
-    <Content Include="Dark\Content\Images\page.bg.lights.png" />
-    <Content Include="Dark\Content\Images\search.bg.png" />
-    <Content Include="Dark\Content\Images\submenu.arrow.png" />
-    <Content Include="Dark\Content\Images\topbanner.BL.png" />
-    <Content Include="Dark\Content\Images\topbanner.BM.png" />
-    <Content Include="Dark\Content\Images\topbanner.BR.png" />
-    <Content Include="Dark\Content\Images\topbanner.ML.png" />
-    <Content Include="Dark\Content\Images\topbanner.MR.png" />
-    <Content Include="Dark\Content\Images\topbanner.TL.png" />
-    <Content Include="Dark\Content\Images\topbanner.TM.png" />
-    <Content Include="Dark\Content\Images\topbanner.TR.png" />
-    <Content Include="Dark\Dark.csproj" />
-    <Content Include="Dark\Instructions.txt" />
-    <Content Include="Dark\js\BindMENU.js" />
-    <Content Include="Dark\Styles\C01.BR.png" />
-    <Content Include="Dark\Styles\C01.TL.png" />
-    <Content Include="Dark\Styles\C01.TM.png" />
-    <Content Include="Dark\Styles\css\ie7.css" />
-    <Content Include="Dark\Styles\site.css" />
-    <Content Include="Dark\Styles\site.uncompressed.css" />
-    <Content Include="Dark\Theme.png" />
-    <Content Include="Dark\Theme.txt" />
-    <Content Include="Dark\ThemeZonePreview.png" />
     <Content Include="MerrickHomeConstruction\Scripts\BannerDoodle\cellular-automata\cellular-automata.js" />
     <Content Include="MerrickHomeConstruction\Scripts\jquery-1.8.2.min.js" />
     <Content Include="MerrickHomeConstruction\Scripts\jquery-ui-1.10.0.custom.min.js" />
@@ -709,15 +665,6 @@
     <Content Include="Bootstrap\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dark\Content\Web.config" />
-    <Content Include="Dark\js\Web.config" />
-    <Content Include="Dark\Placement.info" />
-    <Content Include="Dark\Styles\Web.config" />
-    <Content Include="Dark\Views\Layout-url-HomePage.cshtml" />
-    <Content Include="Dark\Views\Layout.cshtml" />
-    <Content Include="Dark\Views\LogOn2.cshtml" />
-    <Content Include="Dark\Views\Parts\Product.cshtml" />
-    <Content Include="Dark\Views\Widget.Wrapper.cshtml" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <PropertyGroup>
